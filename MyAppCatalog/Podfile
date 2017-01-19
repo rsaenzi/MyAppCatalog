@@ -1,0 +1,28 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '8.0'
+
+target 'MyAppCatalog' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MyAppCatalog
+  pod 'Alamofire', '~> 3.5'
+  pod 'ObjectMapper', '~> 1.5'
+  pod 'PolyglotLocalization'
+  pod 'Kingfisher', '~> 2.6'
+  pod 'TPKeyboardAvoiding'
+  pod 'KVNProgress'
+
+  #pod 'AlamofireObjectMapper'
+
+  target 'MyAppCatalogTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MyAppCatalogUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
