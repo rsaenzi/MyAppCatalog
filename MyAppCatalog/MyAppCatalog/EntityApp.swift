@@ -16,7 +16,7 @@ class EntityApp: Mappable {
     var name:        String?
     var imageUrl:    String?
     var summary:     String?
-    var price:       Double?
+    var price:       String?
     var currency:    String?
     var contentType: String?
     var copyright:   String?

@@ -9,5 +9,10 @@
 import UIKit
 
 class CellAppList: UITableViewCell {
-    
+ 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var date: UILabel!
 }

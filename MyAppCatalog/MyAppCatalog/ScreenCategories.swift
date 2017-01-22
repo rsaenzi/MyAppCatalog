@@ -29,15 +29,17 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         // Dequeue a cell
         let cell = tableView.dequeueReusableCellWithIdentifier("CellCategories", forIndexPath: indexPath) as! CellCategories
         
-        // Fill in the cell
-        cell.name.text     = App.app.model.getCategories()[indexPath.row].name
-        cell.appCount.text = "Apps: \(App.app.model.getApps(categoryIndex: indexPath.row).count)"
+        // Get the category to display
+        let category = App.app.model.getCategories()[indexPath.row]
+        let apps     = App.app.model.getApps(categoryIndex: indexPath.row)
         
-        if let imageLink = App.app.model.getApps(categoryIndex: indexPath.row)[0].imageUrl {
+        // Fill in the cell
+        cell.name.text     = category.name
+        cell.appCount.text = "Apps: \(apps.count)"
+        
+        if let imageLink = apps[0].imageUrl {
             cell.icon.kf_setImageWithURL(NSURL(string: imageLink))
         }
-        
-        //App.app.model.getCategories()[0].link
         
         // Return the filled cell
         return cell

@@ -57,19 +57,19 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-3j-rZD" userLabel="PanelInfo">
-                                                    <rect key="frame" x="96" y="10" width="183" height="80"/>
+                                                    <rect key="frame" x="96" y="10" width="191" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Networking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-Wa-F23">
-                                                            <rect key="frame" x="0.0" y="16" width="183" height="24"/>
+                                                            <rect key="frame" x="0.0" y="16" width="191" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="24" id="RHu-aG-NEn"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                             <color key="textColor" red="0.0046438802960000001" green="0.59982818370000002" blue="0.83699244260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apps: 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AED-k4-Raz">
-                                                            <rect key="frame" x="0.0" y="48" width="183" height="20"/>
+                                                            <rect key="frame" x="0.0" y="48" width="191" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="Rmf-Zc-h4Y"/>
                                                             </constraints>
@@ -93,7 +93,7 @@
                                                 <constraint firstItem="cBu-3j-rZD" firstAttribute="leading" secondItem="tvv-Z2-er5" secondAttribute="trailing" constant="8" id="CPM-oi-52B"/>
                                                 <constraint firstItem="cBu-3j-rZD" firstAttribute="centerY" secondItem="8Rb-Lj-uq8" secondAttribute="centerY" id="G8m-Dp-9xv"/>
                                                 <constraint firstItem="tvv-Z2-er5" firstAttribute="leading" secondItem="8Rb-Lj-uq8" secondAttribute="leading" constant="8" id="OCb-rT-Hg9"/>
-                                                <constraint firstAttribute="trailing" secondItem="cBu-3j-rZD" secondAttribute="trailing" constant="8" id="U9R-yw-XeU"/>
+                                                <constraint firstAttribute="trailing" secondItem="cBu-3j-rZD" secondAttribute="trailing" id="U9R-yw-XeU"/>
                                                 <constraint firstItem="tvv-Z2-er5" firstAttribute="centerY" secondItem="8Rb-Lj-uq8" secondAttribute="centerY" id="pbM-Fm-mXh"/>
                                             </constraints>
                                         </tableViewCellContentView>

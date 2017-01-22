@@ -29,8 +29,30 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         // Dequeue a cell
         let cell = tableView.dequeueReusableCellWithIdentifier("CellAppList", forIndexPath: indexPath) as! CellAppList
+        
+        // Get the apps to display
+        let app = App.app.model.getAppsFromSelectedCategory()[indexPath.row]
     
-        cell.textLabel?.text = App.app.model.getAppsFromSelectedCategory()[indexPath.row].name
+        // Fill in the cell
+        cell.name.text       = app.name
+        cell.artistName.text = app.artistName
+        cell.date.text       = app.releaseDate
+        
+        if let priceString = app.price {
+            
+            // If price is zero, shows the label Free
+            if let price = Double(priceString) where price > 0 {
+                cell.price.text = "\(price) \(app.currency!)"
+            }else {
+                cell.price.text = "Free"
+            }
+        }else {
+            cell.price.text = "-"
+        }
+        
+        if let imageLink = app.imageUrl {
+            cell.icon.kf_setImageWithURL(NSURL(string: imageLink))
+        }
         
         // Return the filled cell
         return cell
