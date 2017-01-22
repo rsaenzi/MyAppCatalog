@@ -11,6 +11,7 @@ import UIKit
 class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableview: UITableView!
+    private let selection = UIView()
     
     override func viewDidLoad() {
         
@@ -19,6 +20,9 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
         // Deletes the empty cells of the table
         tableview.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Set the selection color
+        selection.backgroundColor = App.app.views.lightGreen
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,6 +64,9 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if cell.iconImg.layer.cornerRadius != 12 {
             cell.iconImg.layer.cornerRadius = 12
         }
+        
+        // Set the selection color
+        cell.selectedBackgroundView = selection
         
         // Return the filled cell
         return cell

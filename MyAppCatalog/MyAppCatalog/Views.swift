@@ -10,6 +10,8 @@ import UIKit
 
 class Views {
     
+    let lightGreen = UIColor(red: 197/255, green: 241/255, blue: 227/255, alpha: 1)
+    
     func loadScreen<T: UIViewController>(screenClass: T.Type) -> T {
         
         // Get the screen name

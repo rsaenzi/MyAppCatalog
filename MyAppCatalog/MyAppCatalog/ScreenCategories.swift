@@ -12,11 +12,15 @@ import Kingfisher
 class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
+    private let selection = UIView()
     
     override func viewDidLoad() {
         
         // Deletes the empty cells of the table
         tableview.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Set the selection color
+        selection.backgroundColor = App.app.views.lightGreen
     }
     
     
@@ -46,6 +50,9 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         if cell.iconImg.layer.cornerRadius != 18 {
             cell.iconImg.layer.cornerRadius = 18
         }
+        
+        // Set the selection color
+        cell.selectedBackgroundView = selection
         
         // Return the filled cell
         return cell
