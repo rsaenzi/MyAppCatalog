@@ -18,6 +18,17 @@
 		B14BA4361E34331A00FF16AB /* ScreenCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA4351E34331A00FF16AB /* ScreenCatalog.swift */; };
 		B14BA4391E34332600FF16AB /* ScreenAppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA4381E34332600FF16AB /* ScreenAppList.swift */; };
 		B14BA43B1E34332F00FF16AB /* ScreenAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA43A1E34332F00FF16AB /* ScreenAppInfo.swift */; };
+		B14BA4401E344E2F00FF16AB /* EntityCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA43F1E344E2F00FF16AB /* EntityCatalog.swift */; };
+		B14BA4441E345CDC00FF16AB /* EntityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA4431E345CDC00FF16AB /* EntityApp.swift */; };
+		B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B2F1E3464A0008FEE85 /* StringExtension.swift */; };
+		B1942B321E34679E008FEE85 /* EntityCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B311E34679E008FEE85 /* EntityCategory.swift */; };
+		B1942B351E3478E9008FEE85 /* ApiConnectCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B341E3478E9008FEE85 /* ApiConnectCatalog.swift */; };
+		B1942B3B1E34797C008FEE85 /* ApiResponseCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B3A1E34797C008FEE85 /* ApiResponseCatalog.swift */; };
+		B1942B3D1E347A2F008FEE85 /* ApiCodeCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B3C1E347A2F008FEE85 /* ApiCodeCatalog.swift */; };
+		B1942B401E34861C008FEE85 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B3F1E34861C008FEE85 /* Model.swift */; };
+		B1942B421E348665008FEE85 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B411E348665008FEE85 /* App.swift */; };
+		B1942B441E349056008FEE85 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B431E349056008FEE85 /* Views.swift */; };
+		B1942B4D1E34A44D008FEE85 /* BusinessRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B4C1E34A44D008FEE85 /* BusinessRules.swift */; };
 		B1C4D47E1E30E273004DE573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D47D1E30E273004DE573 /* AppDelegate.swift */; };
 		B1C4D4851E30E273004DE573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C4D4841E30E273004DE573 /* Assets.xcassets */; };
 		B1C4D4881E30E273004DE573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C4D4861E30E273004DE573 /* LaunchScreen.storyboard */; };
@@ -57,6 +68,17 @@
 		B14BA4351E34331A00FF16AB /* ScreenCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCatalog.swift; sourceTree = "<group>"; };
 		B14BA4381E34332600FF16AB /* ScreenAppList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAppList.swift; sourceTree = "<group>"; };
 		B14BA43A1E34332F00FF16AB /* ScreenAppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAppInfo.swift; sourceTree = "<group>"; };
+		B14BA43F1E344E2F00FF16AB /* EntityCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityCatalog.swift; sourceTree = "<group>"; };
+		B14BA4431E345CDC00FF16AB /* EntityApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityApp.swift; sourceTree = "<group>"; };
+		B1942B2F1E3464A0008FEE85 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B1942B311E34679E008FEE85 /* EntityCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityCategory.swift; sourceTree = "<group>"; };
+		B1942B341E3478E9008FEE85 /* ApiConnectCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConnectCatalog.swift; sourceTree = "<group>"; };
+		B1942B3A1E34797C008FEE85 /* ApiResponseCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponseCatalog.swift; sourceTree = "<group>"; };
+		B1942B3C1E347A2F008FEE85 /* ApiCodeCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCodeCatalog.swift; sourceTree = "<group>"; };
+		B1942B3F1E34861C008FEE85 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B1942B411E348665008FEE85 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		B1942B431E349056008FEE85 /* Views.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		B1942B4C1E34A44D008FEE85 /* BusinessRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessRules.swift; sourceTree = "<group>"; };
 		B1C4D47A1E30E273004DE573 /* MyAppCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C4D47D1E30E273004DE573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C4D4841E30E273004DE573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +139,9 @@
 		B14BA4291E34256900FF16AB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B14BA43F1E344E2F00FF16AB /* EntityCatalog.swift */,
+				B14BA4431E345CDC00FF16AB /* EntityApp.swift */,
+				B1942B311E34679E008FEE85 /* EntityCategory.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -129,14 +154,30 @@
 			name = Static;
 			sourceTree = "<group>";
 		};
-		B181DD701E30E3A80069A924 /* View */ = {
+		B14BA43C1E344B1700FF16AB /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		B14BA43D1E344C3900FF16AB /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B331E3478D5008FEE85 /* ApiEndpoints */,
+			);
+			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		B181DD701E30E3A80069A924 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B451E349090008FEE85 /* Management */,
 				B181DD731E30E3D00069A924 /* ViewControllers */,
 				B181DD721E30E3BF0069A924 /* Storyboards */,
 				B181DD711E30E3B60069A924 /* Assets */,
 			);
-			name = View;
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B181DD711E30E3B60069A924 /* Assets */ = {
@@ -170,6 +211,57 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B1942B331E3478D5008FEE85 /* ApiEndpoints */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B381E347956008FEE85 /* Catalog */,
+			);
+			name = ApiEndpoints;
+			sourceTree = "<group>";
+		};
+		B1942B381E347956008FEE85 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B341E3478E9008FEE85 /* ApiConnectCatalog.swift */,
+				B1942B3A1E34797C008FEE85 /* ApiResponseCatalog.swift */,
+				B1942B3C1E347A2F008FEE85 /* ApiCodeCatalog.swift */,
+			);
+			name = Catalog;
+			sourceTree = "<group>";
+		};
+		B1942B3E1E34860A008FEE85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B4A1E34A40D008FEE85 /* Util */,
+				B1942B3F1E34861C008FEE85 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B1942B451E349090008FEE85 /* Management */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B431E349056008FEE85 /* Views.swift */,
+			);
+			name = Management;
+			sourceTree = "<group>";
+		};
+		B1942B4A1E34A40D008FEE85 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B2F1E3464A0008FEE85 /* StringExtension.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		B1942B4B1E34A437008FEE85 /* BusinessRules */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B4C1E34A44D008FEE85 /* BusinessRules.swift */,
+			);
+			name = BusinessRules;
+			sourceTree = "<group>";
+		};
 		B1C4D4711E30E273004DE573 = {
 			isa = PBXGroup;
 			children = (
@@ -195,10 +287,15 @@
 		B1C4D47C1E30E273004DE573 /* MyAppCatalog */ = {
 			isa = PBXGroup;
 			children = (
+				B1942B4B1E34A437008FEE85 /* BusinessRules */,
+				B1942B3E1E34860A008FEE85 /* Model */,
+				B14BA43D1E344C3900FF16AB /* DataAccess */,
+				B14BA43C1E344B1700FF16AB /* Presenters */,
 				B14BA4291E34256900FF16AB /* Entities */,
-				B181DD701E30E3A80069A924 /* View */,
+				B181DD701E30E3A80069A924 /* Views */,
 				B1C4D47D1E30E273004DE573 /* AppDelegate.swift */,
 				B1C4D4891E30E273004DE573 /* Info.plist */,
+				B1942B411E348665008FEE85 /* App.swift */,
 			);
 			path = MyAppCatalog;
 			sourceTree = "<group>";
@@ -518,10 +615,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14BA4441E345CDC00FF16AB /* EntityApp.swift in Sources */,
 				B14BA4341E34331200FF16AB /* ScreenSplash.swift in Sources */,
+				B1942B3B1E34797C008FEE85 /* ApiResponseCatalog.swift in Sources */,
 				B14BA4361E34331A00FF16AB /* ScreenCatalog.swift in Sources */,
+				B14BA4401E344E2F00FF16AB /* EntityCatalog.swift in Sources */,
+				B1942B421E348665008FEE85 /* App.swift in Sources */,
 				B1C4D47E1E30E273004DE573 /* AppDelegate.swift in Sources */,
+				B1942B401E34861C008FEE85 /* Model.swift in Sources */,
+				B1942B4D1E34A44D008FEE85 /* BusinessRules.swift in Sources */,
+				B1942B441E349056008FEE85 /* Views.swift in Sources */,
+				B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */,
+				B1942B3D1E347A2F008FEE85 /* ApiCodeCatalog.swift in Sources */,
 				B14BA43B1E34332F00FF16AB /* ScreenAppInfo.swift in Sources */,
+				B1942B321E34679E008FEE85 /* EntityCategory.swift in Sources */,
+				B1942B351E3478E9008FEE85 /* ApiConnectCatalog.swift in Sources */,
 				B14BA4391E34332600FF16AB /* ScreenAppList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
