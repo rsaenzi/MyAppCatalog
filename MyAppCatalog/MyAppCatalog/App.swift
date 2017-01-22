@@ -13,6 +13,7 @@ class App {
     // --------------------------------------------------
     var model: Model         = Model()!
     var views: Views         = Views()!
+    var data : DataAccess    = DataAccess()!
     var rules: BusinessRules = BusinessRules()!
 
     

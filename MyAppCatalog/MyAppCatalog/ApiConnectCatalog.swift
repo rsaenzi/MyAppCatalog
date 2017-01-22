@@ -8,14 +8,17 @@
 
 import Alamofire
 
-typealias ApiCallbackCatalog = (response: ApiResponseCatalog) -> ()
+typealias CallbackApiCatalog = (response: ApiResponseCatalog) -> ()
 
 class ApiConnectCatalog {
     
-    private var callback: ApiCallbackCatalog?
+    private var callback: CallbackApiCatalog?
     private let endpointUrl = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json"
     
-    func connect(callback: ApiCallbackCatalog) {
+    func get(callback: CallbackApiCatalog) {
+        
+        // Saves the callback for later execution
+        self.callback = callback
         
         // Configuration
         let method = Alamofire.Method.GET
@@ -26,6 +29,8 @@ class ApiConnectCatalog {
         // Start the connection
         connector.responseString { result in
             
+            //print("Connection Result: \(result)")
+            
             // Handle the result properly
             self.handleResult(result)
         }
@@ -35,6 +40,8 @@ class ApiConnectCatalog {
         
         // Response object
         let response = ApiResponseCatalog()
+        
+        print("Hanlde Result Success: \(result.result.isSuccess)")
     
         // If connection was established
         if result.result.isSuccess {
@@ -46,6 +53,8 @@ class ApiConnectCatalog {
                 
                 // Sanitation of the Json string to allow parsing
                 if let jsonString = result.result.value?.replace("\"im:", replacement: "\"") {
+                    
+                    //print("Json String: \(jsonString)")
                 
                     // Parse the entities from the Json string
                     let catalog = EntityCatalog(JSONString: jsonString)
@@ -80,6 +89,19 @@ class ApiConnectCatalog {
         
         // Sends back the response
         callback?(response: response)
+    }
+    
+    // --------------------------------------------------
+    // Unique-Access Singleton
+    // --------------------------------------------------
+    private static var instanceCreated = false
+    
+    required init?() {
+        if ApiConnectCatalog.instanceCreated == false {
+            ApiConnectCatalog.instanceCreated = true
+        }else{
+            return nil
+        }
     }
     
 }

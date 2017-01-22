@@ -15,17 +15,13 @@ class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidLoad() {
         
-        /*
-        ApiConnector.connect() { response in
-            
-            let catalog = EntityCatalog(JSONString: response)
-        }
-        */
+        // Deletes the empty cells of the table
+        tableview.tableFooterView = UIView(frame: CGRectZero)
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return App.app.model.getCategories().count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -33,10 +29,19 @@ class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSourc
         // Dequeue a cell
         let cell = tableView.dequeueReusableCellWithIdentifier("CellCatalog", forIndexPath: indexPath) // as! CellCatalog
         
+        cell.textLabel?.text = App.app.model.getCategories()[indexPath.row].name
+        
         // Return the filled cell
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // Saves the selected category index
+        App.app.model.selectedCategory = indexPath.row
+        
+        // Shows the screen App List
+        let screen: ScreenAppList = App.app.views.loadScreen()
+        self.presentViewController(screen, animated: true, completion: nil)
     }
 }

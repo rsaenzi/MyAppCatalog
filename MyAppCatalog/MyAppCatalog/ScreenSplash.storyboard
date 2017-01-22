@@ -24,6 +24,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tmU-Td-q1L">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apple" translatesAutoresizingMaskIntoConstraints="NO" id="MXl-23-nWL">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -40,6 +44,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Apple" width="256" height="256"/>
         <image name="Background" width="398" height="399"/>
     </resources>
     <color key="tintColor" red="0.0046438802964985371" green="0.59982818365097046" blue="0.83699244260787964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

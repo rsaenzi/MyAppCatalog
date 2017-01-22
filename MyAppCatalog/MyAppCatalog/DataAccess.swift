@@ -1,18 +1,15 @@
 //
-//  BusinessRules.swift
+//  DataAccess.swift
 //  MyAppCatalog
 //
 //  Created by Rigoberto Sáenz Imbacuán [https://www.linkedin.com/in/rsaenzi] on 1/22/17.
 //  Copyright © 2017 Rigoberto Sáenz Imbacuán. All rights reserved.
 //
 
-class BusinessRules {
+class DataAccess {
     
-    // --------------------------------------------------
-    // Components
-    // --------------------------------------------------
-    var catalog: RuleCatalog = RuleCatalog()!
-    
+    var catalog: ApiConnectCatalog = ApiConnectCatalog()!
+
     
     // --------------------------------------------------
     // Unique-Access Singleton
@@ -20,8 +17,8 @@ class BusinessRules {
     private static var instanceCreated = false
     
     required init?() {
-        if BusinessRules.instanceCreated == false {
-            BusinessRules.instanceCreated = true
+        if DataAccess.instanceCreated == false {
+            DataAccess.instanceCreated = true
         }else{
             return nil
         }

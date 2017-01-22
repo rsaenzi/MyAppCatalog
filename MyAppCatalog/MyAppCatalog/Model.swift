@@ -11,9 +11,74 @@ class Model {
     // --------------------------------------------------
     // Components
     // --------------------------------------------------
-    var catalog: EntityCatalog?
+    private var categories:   [EntityCategory]?
+    private var appsByCategory: [Int: [EntityApp]]?
+    
+    var selectedCategory: Int = 0
+    var selectedApp:      Int = 0
     
     
+    func saveCatalog(catalog: EntityCatalog) {
+        
+        // First we extract the categories avoinding duplicates
+        var extractedCategories = [String : EntityCategory]()
+        
+        // If the catalog has any apps
+        if let allApps = catalog.apps {
+            for app in allApps {
+             
+                // If the app has a category
+                if let category = app.category {
+                    if let id = category.id {
+                        
+                        // Extracts the category. Dictionary takes care of duplicates
+                        extractedCategories[id] = category
+                    }
+                }
+            }
+        }
+        
+        // Finally saves the categories
+        categories = extractedCategories.map{$1}
+        
+        
+        // Now we filter the applications by category
+        appsByCategory = [:]
+        
+        // Loops through all categories
+        for (categoryIndex, categoryToTest) in categories!.enumerate() {
+            
+            // Loop through the apps
+            if let allApps = catalog.apps {
+                
+                // Filter the apps tha belongs to the current category
+                let appsForCategory: [EntityApp] = allApps.filter({$0.category!.id == categoryToTest.id})
+                
+                // Adds the apps to right position in application dictionary
+                appsByCategory?[categoryIndex] = appsForCategory
+            }
+        }
+        
+        // Reset the indexes
+        selectedCategory = 0
+        selectedApp      = 0
+    }
+    
+    func getCategories() -> [EntityCategory] {
+        if let list = categories {
+            return list
+        }else {
+            return []
+        }
+    }
+    
+    func getAppsFromSelectedCategory() -> [EntityApp] {
+        if let apps = appsByCategory?[selectedCategory] {
+            return apps
+        }else {
+            return []
+        }
+    }
     
     // --------------------------------------------------
     // Unique-Access Singleton

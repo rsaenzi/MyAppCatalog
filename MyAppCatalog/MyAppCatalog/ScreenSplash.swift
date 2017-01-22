@@ -11,4 +11,21 @@ import Foundation
 
 class ScreenSplash: UIViewController {
     
+    override func viewDidLoad() {
+        
+        // Load alert
+        
+        // Start the connection to API
+        App.app.rules.catalog.start() { (success) in
+            
+            print("Rule Success: \(success)")
+            
+            let screen: ScreenCatalog = App.app.views.loadScreen()
+            self.presentViewController(screen, animated: true, completion: {
+                
+            })
+            
+        }
+    }
+    
 }
