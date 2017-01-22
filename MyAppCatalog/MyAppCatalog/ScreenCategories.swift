@@ -37,8 +37,14 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.name.text     = category.name
         cell.appCount.text = "Apps: \(apps.count)"
         
+        // Shows the icon
         if let imageLink = apps[0].imageUrl {
-            cell.icon.kf_setImageWithURL(NSURL(string: imageLink))
+            cell.iconImg.kf_setImageWithURL(NSURL(string: imageLink))
+        }
+        
+        // Adds a round border to imageview
+        if cell.iconImg.layer.cornerRadius != 18 {
+            cell.iconImg.layer.cornerRadius = 18
         }
         
         // Return the filled cell

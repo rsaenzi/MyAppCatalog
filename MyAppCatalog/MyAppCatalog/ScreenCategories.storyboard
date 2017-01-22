@@ -36,8 +36,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvv-Z2-er5" userLabel="PanelIcon">
                                                     <rect key="frame" x="8" y="10" width="80" height="80"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-hQ-tsf">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-hQ-tsf">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Folder" translatesAutoresizingMaskIntoConstraints="NO" id="pVD-Sq-mVR" userLabel="Folder">
                                                             <rect key="frame" x="40" y="40" width="40" height="40"/>
@@ -99,7 +100,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="appCount" destination="AED-k4-Raz" id="hRE-o4-l3A"/>
-                                            <outlet property="icon" destination="fI8-hQ-tsf" id="eLc-vI-uue"/>
+                                            <outlet property="iconImg" destination="fI8-hQ-tsf" id="0g6-gL-ARq"/>
                                             <outlet property="name" destination="k9W-Wa-F23" id="sTv-cJ-rm2"/>
                                         </connections>
                                     </tableViewCell>

@@ -11,6 +11,6 @@ import UIKit
 class CellCategories: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var appCount: UILabel!
 }

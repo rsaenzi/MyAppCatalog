@@ -38,6 +38,7 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.artistName.text = app.artistName
         cell.date.text       = app.releaseDate
         
+        // Shows the price
         if let priceString = app.price {
             
             // If price is zero, shows the label Free
@@ -50,8 +51,14 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
             cell.price.text = "-"
         }
         
+        // Shows the icon
         if let imageLink = app.imageUrl {
-            cell.icon.kf_setImageWithURL(NSURL(string: imageLink))
+            cell.iconImg.kf_setImageWithURL(NSURL(string: imageLink))
+        }
+        
+        // Adds a round border to imageview
+        if cell.iconImg.layer.cornerRadius != 12 {
+            cell.iconImg.layer.cornerRadius = 12
         }
         
         // Return the filled cell

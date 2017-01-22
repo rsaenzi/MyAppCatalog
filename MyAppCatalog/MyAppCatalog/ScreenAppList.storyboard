@@ -35,8 +35,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjN-4n-9zC" userLabel="PanelIcon">
                                                     <rect key="frame" x="8" y="9.5" width="60" height="60"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-WJ-iQ3">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-WJ-iQ3">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -116,7 +117,7 @@
                                         <connections>
                                             <outlet property="artistName" destination="c7B-yc-VgT" id="kmg-ti-pDl"/>
                                             <outlet property="date" destination="piH-uq-sBP" id="eLQ-6L-DCF"/>
-                                            <outlet property="icon" destination="CPv-WJ-iQ3" id="Ycm-E3-fHq"/>
+                                            <outlet property="iconImg" destination="CPv-WJ-iQ3" id="pBY-Na-fiq"/>
                                             <outlet property="name" destination="Jdr-JE-m1D" id="buC-hB-rPM"/>
                                             <outlet property="price" destination="jIe-vI-REZ" id="R0g-3k-uTv"/>
                                         </connections>
