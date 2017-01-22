@@ -12,8 +12,6 @@ class ScreenSplash: UIViewController {
     
     override func viewDidLoad() {
         
-        // Load alert
-        
         // Start the connection to API
         App.app.rules.catalog.start() { (success) in
             
@@ -43,10 +41,10 @@ class ScreenSplash: UIViewController {
     private func showCatalog() {
     
         // Creates the screen
-        let screen: ScreenCatalog = App.app.views.loadScreen()
+        let screen = App.app.views.loadScreen(ScreenCategories)
         
         // Place it in a navigation controller
-        let navController: NavControlMain = App.app.views.loadNavController(rootScreen: screen)
+        let navController = App.app.views.loadNavController(NavControlMain.self, rootScreen: screen)
         
         // Request navigation controller to show its root view controller
         self.presentViewController(navController, animated: true, completion: nil)

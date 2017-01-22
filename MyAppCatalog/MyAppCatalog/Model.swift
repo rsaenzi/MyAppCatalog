@@ -64,9 +64,25 @@ class Model {
         selectedApp      = 0
     }
     
+    func getSelectedCategory() -> EntityCategory {
+        return getCategories()[selectedCategory]
+    }
+    
     func getCategories() -> [EntityCategory] {
         if let list = categories {
             return list
+        }else {
+            return []
+        }
+    }
+    
+    func getSelectedApp() -> EntityApp {
+        return getAppsFromSelectedCategory()[selectedApp]
+    }
+    
+    func getApps(categoryIndex index: Int) -> [EntityApp] {
+        if let apps = appsByCategory?[index] {
+            return apps
         }else {
             return []
         }

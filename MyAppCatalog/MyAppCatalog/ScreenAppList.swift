@@ -13,6 +13,9 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
+        
+        // Set the screen title
+        self.navigationItem.title = App.app.model.getSelectedCategory().name
     
         // Deletes the empty cells of the table
         tableview.tableFooterView = UIView(frame: CGRectZero)
@@ -40,7 +43,10 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         App.app.model.selectedApp = indexPath.row
         
         // Shows the screen App Info
-        let screen: ScreenAppInfo = App.app.views.loadScreen()
+        let screen = App.app.views.loadScreen(ScreenAppInfo)
         self.navigationController?.pushViewController(screen, animated: true)
+        
+        // Clears the selection
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

@@ -10,4 +10,10 @@ import UIKit
 
 class ScreenAppInfo: UIViewController {
     
+    
+    override func viewDidLoad() {
+        
+        // Set the screen title
+        self.navigationItem.title = App.app.model.getSelectedApp().name
+    }
 }

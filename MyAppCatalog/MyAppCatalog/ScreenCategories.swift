@@ -1,5 +1,5 @@
 //
-//  ScreenCatalog.swift
+//  ScreenCategories.swift
 //  MyAppCatalog
 //
 //  Created by Rigoberto Sáenz Imbacuán [https://www.linkedin.com/in/rsaenzi] on 1/21/17.
@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -26,9 +27,17 @@ class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Dequeue a cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellCatalog", forIndexPath: indexPath) as! CellCatalog
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellCategories", forIndexPath: indexPath) as! CellCategories
         
-        cell.textLabel?.text = App.app.model.getCategories()[indexPath.row].name
+        // Fill in the cell
+        cell.name.text     = App.app.model.getCategories()[indexPath.row].name
+        cell.appCount.text = "Apps: \(App.app.model.getApps(categoryIndex: indexPath.row).count)"
+        
+        if let imageLink = App.app.model.getApps(categoryIndex: indexPath.row)[0].imageUrl {
+            cell.icon.kf_setImageWithURL(NSURL(string: imageLink))
+        }
+        
+        //App.app.model.getCategories()[0].link
         
         // Return the filled cell
         return cell
@@ -40,7 +49,10 @@ class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSourc
         App.app.model.selectedCategory = indexPath.row
         
         // Shows the screen App List
-        let screen: ScreenAppList = App.app.views.loadScreen()
+        let screen = App.app.views.loadScreen(ScreenAppList)
         self.navigationController?.pushViewController(screen, animated: true)
+        
+        // Clears the selection
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }

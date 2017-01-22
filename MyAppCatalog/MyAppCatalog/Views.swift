@@ -10,10 +10,10 @@ import UIKit
 
 class Views {
     
-    func loadScreen<T: UIViewController>() -> T {
+    func loadScreen<T: UIViewController>(screenClass: T.Type) -> T {
         
         // Get the screen name
-        let name = className(T)
+        let name = className(screenClass)
         
         // Load Storyboard
         let storyboard = UIStoryboard(name: name, bundle: nil)
@@ -28,10 +28,10 @@ class Views {
         }
     }
     
-    func loadNavController<T: UINavigationController>(rootScreen root: UIViewController) -> T {
+    func loadNavController<T: UINavigationController>(navControllerClass: T.Type, rootScreen root: UIViewController) -> T {
         
-        // Get the screen name
-        let name = className(T)
+        // Get the NavController name
+        let name = className(navControllerClass)
         
         // Load Storyboard
         let storyboard = UIStoryboard(name: name, bundle: nil)
@@ -44,7 +44,7 @@ class Views {
             return navController
             
         }else {
-            // Returns a NavController screen
+            // Returns a default NavController
             return UINavigationController() as! T
         }
     }

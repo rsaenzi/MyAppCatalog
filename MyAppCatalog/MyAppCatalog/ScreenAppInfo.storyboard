@@ -22,7 +22,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Info" id="59q-eN-MJy"/>
+                    <navigationItem key="navigationItem" title="Info" id="59q-eN-MJy">
+                        <barButtonItem key="backBarButtonItem" title="  " id="8LM-g4-Qan"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXJ-EM-rag" userLabel="First Responder" sceneMemberID="firstResponder"/>
