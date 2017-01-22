@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class ScreenSplash: UIViewController {
     
@@ -20,12 +19,37 @@ class ScreenSplash: UIViewController {
             
             print("Rule Success: \(success)")
             
-            let screen: ScreenCatalog = App.app.views.loadScreen()
-            self.presentViewController(screen, animated: true, completion: {
+            // If the data could be obtained from the API
+            if success == true {
+                self.showCatalog()
+
+            }else {
                 
-            })
-            
+                // Create the OK button
+                let alertActionOK = UIAlertAction(title: "OK", style: .Default, handler: { (alertAction) in
+                    self.showCatalog()
+                })
+                
+                // Create and configure the alert
+                let alert = UIAlertController(title: "Info", message: "There is no Internet", preferredStyle: .Alert)
+                alert.addAction(alertActionOK)
+                
+                // Display the alert
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
+    }
+    
+    private func showCatalog() {
+    
+        // Creates the screen
+        let screen: ScreenCatalog = App.app.views.loadScreen()
+        
+        // Place it in a navigation controller
+        let navController: NavControlMain = App.app.views.loadNavController(rootScreen: screen)
+        
+        // Request navigation controller to show its root view controller
+        self.presentViewController(navController, animated: true, completion: nil)
     }
     
 }

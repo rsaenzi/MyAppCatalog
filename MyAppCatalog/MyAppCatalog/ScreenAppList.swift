@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -26,11 +25,22 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Dequeue a cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellAppList", forIndexPath: indexPath) // as! CellAppList
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellAppList", forIndexPath: indexPath) as! CellAppList
     
         cell.textLabel?.text = App.app.model.getAppsFromSelectedCategory()[indexPath.row].name
         
         // Return the filled cell
         return cell
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // Saves the selected app index
+        App.app.model.selectedApp = indexPath.row
+        
+        // Shows the screen App Info
+        let screen: ScreenAppInfo = App.app.views.loadScreen()
+        self.navigationController?.pushViewController(screen, animated: true)
     }
 }

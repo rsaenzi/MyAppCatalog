@@ -28,7 +28,28 @@ class Views {
         }
     }
     
-    func className(some: Any) -> String {
+    func loadNavController<T: UINavigationController>(rootScreen root: UIViewController) -> T {
+        
+        // Get the screen name
+        let name = className(T)
+        
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        
+        // Load NavController an cast it
+        if let navController = storyboard.instantiateViewControllerWithIdentifier(name) as? T {
+            
+            // Set the root view controller
+            navController.setViewControllers([root], animated: false)
+            return navController
+            
+        }else {
+            // Returns a NavController screen
+            return UINavigationController() as! T
+        }
+    }
+    
+    private func className(some: Any) -> String {
         return (some is Any.Type) ? "\(some)" : "\(some.dynamicType)"
     }
     

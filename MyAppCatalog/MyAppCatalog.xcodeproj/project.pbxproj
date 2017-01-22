@@ -31,6 +31,10 @@
 		B1942B4D1E34A44D008FEE85 /* BusinessRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B4C1E34A44D008FEE85 /* BusinessRules.swift */; };
 		B1942B4F1E34A93D008FEE85 /* RuleCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B4E1E34A93D008FEE85 /* RuleCatalog.swift */; };
 		B1942B511E34AE30008FEE85 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B501E34AE30008FEE85 /* DataAccess.swift */; };
+		B1942B551E354E74008FEE85 /* CellAppList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B541E354E74008FEE85 /* CellAppList.swift */; };
+		B1942B571E354E7D008FEE85 /* CellCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B561E354E7D008FEE85 /* CellCatalog.swift */; };
+		B1942B591E354FD9008FEE85 /* NavControlMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1942B581E354FD9008FEE85 /* NavControlMain.storyboard */; };
+		B1942B5B1E3552AA008FEE85 /* NavControlMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B5A1E3552AA008FEE85 /* NavControlMain.swift */; };
 		B1C4D47E1E30E273004DE573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D47D1E30E273004DE573 /* AppDelegate.swift */; };
 		B1C4D4851E30E273004DE573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C4D4841E30E273004DE573 /* Assets.xcassets */; };
 		B1C4D4881E30E273004DE573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C4D4861E30E273004DE573 /* LaunchScreen.storyboard */; };
@@ -83,6 +87,10 @@
 		B1942B4C1E34A44D008FEE85 /* BusinessRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessRules.swift; sourceTree = "<group>"; };
 		B1942B4E1E34A93D008FEE85 /* RuleCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleCatalog.swift; sourceTree = "<group>"; };
 		B1942B501E34AE30008FEE85 /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		B1942B541E354E74008FEE85 /* CellAppList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAppList.swift; sourceTree = "<group>"; };
+		B1942B561E354E7D008FEE85 /* CellCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCatalog.swift; sourceTree = "<group>"; };
+		B1942B581E354FD9008FEE85 /* NavControlMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavControlMain.storyboard; sourceTree = "<group>"; };
+		B1942B5A1E3552AA008FEE85 /* NavControlMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavControlMain.swift; sourceTree = "<group>"; };
 		B1C4D47A1E30E273004DE573 /* MyAppCatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAppCatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C4D47D1E30E273004DE573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C4D4841E30E273004DE573 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 		B14BA43D1E344C3900FF16AB /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				B1942B521E354B76008FEE85 /* Persistence */,
 				B1942B331E3478D5008FEE85 /* ApiEndpoints */,
 				B1942B501E34AE30008FEE85 /* DataAccess.swift */,
 			);
@@ -177,6 +186,7 @@
 		B181DD701E30E3A80069A924 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1942B531E354B95008FEE85 /* Cells */,
 				B1942B451E349090008FEE85 /* Management */,
 				B181DD731E30E3D00069A924 /* ViewControllers */,
 				B181DD721E30E3BF0069A924 /* Storyboards */,
@@ -201,6 +211,7 @@
 				B14BA42C1E34282700FF16AB /* ScreenCatalog.storyboard */,
 				B14BA42E1E34287000FF16AB /* ScreenAppList.storyboard */,
 				B14BA4301E34288500FF16AB /* ScreenAppInfo.storyboard */,
+				B1942B581E354FD9008FEE85 /* NavControlMain.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				B14BA4351E34331A00FF16AB /* ScreenCatalog.swift */,
 				B14BA4381E34332600FF16AB /* ScreenAppList.swift */,
 				B14BA43A1E34332F00FF16AB /* ScreenAppInfo.swift */,
+				B1942B5A1E3552AA008FEE85 /* NavControlMain.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -266,6 +278,22 @@
 				B1942B4E1E34A93D008FEE85 /* RuleCatalog.swift */,
 			);
 			name = BusinessRules;
+			sourceTree = "<group>";
+		};
+		B1942B521E354B76008FEE85 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
+		B1942B531E354B95008FEE85 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B541E354E74008FEE85 /* CellAppList.swift */,
+				B1942B561E354E7D008FEE85 /* CellCatalog.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		B1C4D4711E30E273004DE573 = {
@@ -456,6 +484,7 @@
 				B1C4D4881E30E273004DE573 /* LaunchScreen.storyboard in Resources */,
 				B14BA42B1E34281200FF16AB /* ScreenSplash.storyboard in Resources */,
 				B14BA4311E34288500FF16AB /* ScreenAppInfo.storyboard in Resources */,
+				B1942B591E354FD9008FEE85 /* NavControlMain.storyboard in Resources */,
 				B1C4D4851E30E273004DE573 /* Assets.xcassets in Resources */,
 				B14BA42D1E34282700FF16AB /* ScreenCatalog.storyboard in Resources */,
 				B14BA42F1E34287000FF16AB /* ScreenAppList.storyboard in Resources */,
@@ -628,10 +657,13 @@
 				B14BA4361E34331A00FF16AB /* ScreenCatalog.swift in Sources */,
 				B14BA4401E344E2F00FF16AB /* EntityCatalog.swift in Sources */,
 				B1942B421E348665008FEE85 /* App.swift in Sources */,
+				B1942B571E354E7D008FEE85 /* CellCatalog.swift in Sources */,
 				B1942B511E34AE30008FEE85 /* DataAccess.swift in Sources */,
+				B1942B5B1E3552AA008FEE85 /* NavControlMain.swift in Sources */,
 				B1C4D47E1E30E273004DE573 /* AppDelegate.swift in Sources */,
 				B1942B401E34861C008FEE85 /* Model.swift in Sources */,
 				B1942B4D1E34A44D008FEE85 /* BusinessRules.swift in Sources */,
+				B1942B551E354E74008FEE85 /* CellAppList.swift in Sources */,
 				B1942B441E349056008FEE85 /* Views.swift in Sources */,
 				B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */,
 				B1942B3D1E347A2F008FEE85 /* ApiCodeCatalog.swift in Sources */,

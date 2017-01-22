@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -27,7 +26,7 @@ class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Dequeue a cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellCatalog", forIndexPath: indexPath) // as! CellCatalog
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellCatalog", forIndexPath: indexPath) as! CellCatalog
         
         cell.textLabel?.text = App.app.model.getCategories()[indexPath.row].name
         
@@ -42,6 +41,6 @@ class ScreenCatalog: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         // Shows the screen App List
         let screen: ScreenAppList = App.app.views.loadScreen()
-        self.presentViewController(screen, animated: true, completion: nil)
+        self.navigationController?.pushViewController(screen, animated: true)
     }
 }
