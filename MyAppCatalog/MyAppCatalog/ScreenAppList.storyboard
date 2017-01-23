@@ -136,14 +136,14 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="vMd-wG-9AV" secondAttribute="trailing" id="5Vp-9q-AXg"/>
-                            <constraint firstItem="cV2-T3-b6g" firstAttribute="top" secondItem="vMd-wG-9AV" secondAttribute="bottom" id="6zi-JI-w9s"/>
-                            <constraint firstItem="vMd-wG-9AV" firstAttribute="top" secondItem="B5n-ab-sJK" secondAttribute="top" id="GDB-Oa-lGm"/>
-                            <constraint firstItem="vMd-wG-9AV" firstAttribute="leading" secondItem="B5n-ab-sJK" secondAttribute="leading" id="gOy-Pc-4ZE"/>
+                            <constraint firstItem="vMd-wG-9AV" firstAttribute="leading" secondItem="B5n-ab-sJK" secondAttribute="leading" id="2md-rS-fRd"/>
+                            <constraint firstItem="cV2-T3-b6g" firstAttribute="top" secondItem="vMd-wG-9AV" secondAttribute="bottom" id="6fN-US-ebv"/>
+                            <constraint firstAttribute="trailing" secondItem="vMd-wG-9AV" secondAttribute="trailing" id="Xz2-rI-QaA"/>
+                            <constraint firstItem="vMd-wG-9AV" firstAttribute="top" secondItem="B5n-ab-sJK" secondAttribute="top" id="wLu-kw-2xF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Apps" id="KZ2-5J-lMt">
-                        <barButtonItem key="backBarButtonItem" title="  " id="ZsU-py-ThS"/>
+                    <navigationItem key="navigationItem" title="ScreenAppList" id="5fr-0G-zbh">
+                        <barButtonItem key="backBarButtonItem" title="  " id="LK4-JQ-2LZ"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

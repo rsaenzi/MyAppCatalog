@@ -22,6 +22,11 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="J1y-aP-BsS">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0046438802960000001" green="0.59982818370000002" blue="0.83699244260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evj-Ct-8xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

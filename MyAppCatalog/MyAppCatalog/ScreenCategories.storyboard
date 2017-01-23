@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="FdD-la-IKQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dWf-sk-izR" userLabel="Screen">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8BB-KQ-eCX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" red="0.0032942520920000002" green="0.88688063620000002" blue="0.94331908229999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -114,16 +114,16 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8BB-KQ-eCX" secondAttribute="trailing" id="3CF-Gv-tUo"/>
-                            <constraint firstItem="FdD-la-IKQ" firstAttribute="top" secondItem="8BB-KQ-eCX" secondAttribute="bottom" id="FBw-KG-uBi"/>
-                            <constraint firstItem="8BB-KQ-eCX" firstAttribute="leading" secondItem="dWf-sk-izR" secondAttribute="leading" id="cQy-O3-ZmR"/>
-                            <constraint firstItem="8BB-KQ-eCX" firstAttribute="top" secondItem="dWf-sk-izR" secondAttribute="top" id="ouU-Yz-OE7"/>
+                            <constraint firstAttribute="trailing" secondItem="8BB-KQ-eCX" secondAttribute="trailing" id="BdM-hZ-j9y"/>
+                            <constraint firstItem="FdD-la-IKQ" firstAttribute="top" secondItem="8BB-KQ-eCX" secondAttribute="bottom" id="OQF-JE-TMm"/>
+                            <constraint firstItem="8BB-KQ-eCX" firstAttribute="top" secondItem="dWf-sk-izR" secondAttribute="top" id="dxE-ta-KR0"/>
+                            <constraint firstItem="8BB-KQ-eCX" firstAttribute="leading" secondItem="dWf-sk-izR" secondAttribute="leading" id="mMw-MG-1KZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="JmR-27-QbQ">
                         <barButtonItem key="backBarButtonItem" title="  " id="4bq-zS-sUY"/>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="tableview" destination="8BB-KQ-eCX" id="7ng-Pw-6yj"/>
                     </connections>

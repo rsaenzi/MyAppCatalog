@@ -10,15 +10,11 @@ import UIKit
 
 class ScreenSplash: UIViewController {
     
-    
     override func viewDidLoad() {
-        
-        print("Conection: Waiting...")
-        
-        let triggerTime = Int64(NSEC_PER_SEC) * 10
+    
+        // TODO: Temporal
+        let triggerTime = Int64(NSEC_PER_SEC) * 1
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
-        
-            print("Conection: Started!")
         
             // Start the connection to API
             App.app.rules.catalog.start() { (ruleResult) in
@@ -27,13 +23,11 @@ class ScreenSplash: UIViewController {
                 self.processResult(ruleResult)
             }
         })
-        
-
     }
     
     private func processResult(ruleResult: RuleCatalogResult){
     
-        // Temp...
+        // TODO: Temporal
         let triggerTime = Int64(NSEC_PER_SEC) * 2
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
             
@@ -75,12 +69,19 @@ class ScreenSplash: UIViewController {
     }
     
     private func showCatalog() {
-    
+        
         // Creates the screen
         let screen = App.app.views.loadScreen(ScreenCategories)
         
         // Place it in a navigation controller
         let navController = App.app.views.loadNavController(NavControlMain.self, rootScreen: screen)
+        
+        // Specify the animator for this transition
+        let animator = AnimatorSplashToNavMain()
+        navController.transitioningDelegate = animator
+        
+        // Set the delegate of navController as itself
+        navController.delegate = navController
         
         // Request navigation controller to show its root view controller
         self.presentViewController(navController, animated: true, completion: nil)

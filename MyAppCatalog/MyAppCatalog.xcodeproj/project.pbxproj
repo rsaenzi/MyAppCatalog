@@ -43,6 +43,8 @@
 		B1C4D4931E30E273004DE573 /* MyAppCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D4921E30E273004DE573 /* MyAppCatalogTests.swift */; };
 		B1C4D49E1E30E273004DE573 /* MyAppCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D49D1E30E273004DE573 /* MyAppCatalogUITests.swift */; };
 		B1DDC1A01E35E478009C8F0F /* PersistenceStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */; };
+		B1DDC1A21E36082C009C8F0F /* AnimatorNavControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC1A11E36082C009C8F0F /* AnimatorNavControllerMain.swift */; };
+		B1DDC1A51E360E86009C8F0F /* AnimatorSplashToNavMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC1A41E360E86009C8F0F /* AnimatorSplashToNavMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		B1C4D49D1E30E273004DE573 /* MyAppCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppCatalogUITests.swift; sourceTree = "<group>"; };
 		B1C4D49F1E30E273004DE573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceStorable.swift; sourceTree = "<group>"; };
+		B1DDC1A11E36082C009C8F0F /* AnimatorNavControllerMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorNavControllerMain.swift; sourceTree = "<group>"; };
+		B1DDC1A41E360E86009C8F0F /* AnimatorSplashToNavMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorSplashToNavMain.swift; sourceTree = "<group>"; };
 		DAAD063A8621E862F81ED9CE /* Pods_MyAppCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24D7F48A0ED072D6583C661 /* Pods_MyAppCatalogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppCatalogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F234DDA8284183E28EEE9643 /* Pods-MyAppCatalogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppCatalogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppCatalogTests/Pods-MyAppCatalogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 		B181DD701E30E3A80069A924 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1DDC1A31E3609DB009C8F0F /* Animators */,
 				B1942B531E354B95008FEE85 /* Cells */,
 				B1942B451E349090008FEE85 /* Management */,
 				B181DD731E30E3D00069A924 /* ViewControllers */,
@@ -375,6 +380,15 @@
 				B1C4D49F1E30E273004DE573 /* Info.plist */,
 			);
 			path = MyAppCatalogUITests;
+			sourceTree = "<group>";
+		};
+		B1DDC1A31E3609DB009C8F0F /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				B1DDC1A11E36082C009C8F0F /* AnimatorNavControllerMain.swift */,
+				B1DDC1A41E360E86009C8F0F /* AnimatorSplashToNavMain.swift */,
+			);
+			name = Animators;
 			sourceTree = "<group>";
 		};
 		FD13ED877BFAC59B332B309B /* Frameworks */ = {
@@ -685,6 +699,7 @@
 				B14BA4401E344E2F00FF16AB /* EntityCatalog.swift in Sources */,
 				B1942B421E348665008FEE85 /* App.swift in Sources */,
 				B1942B571E354E7D008FEE85 /* CellCategories.swift in Sources */,
+				B1DDC1A21E36082C009C8F0F /* AnimatorNavControllerMain.swift in Sources */,
 				B1942B511E34AE30008FEE85 /* DataAccess.swift in Sources */,
 				B1942B5B1E3552AA008FEE85 /* NavControlMain.swift in Sources */,
 				B1C4D47E1E30E273004DE573 /* AppDelegate.swift in Sources */,
@@ -695,6 +710,7 @@
 				B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */,
 				B1942B3D1E347A2F008FEE85 /* ApiCodeCatalog.swift in Sources */,
 				B15241271E35D6E900C57FBA /* PersistenceCatalog.swift in Sources */,
+				B1DDC1A51E360E86009C8F0F /* AnimatorSplashToNavMain.swift in Sources */,
 				B14BA43B1E34332F00FF16AB /* ScreenAppInfo.swift in Sources */,
 				B1942B321E34679E008FEE85 /* EntityCategory.swift in Sources */,
 				B1942B351E3478E9008FEE85 /* ApiConnectCatalog.swift in Sources */,

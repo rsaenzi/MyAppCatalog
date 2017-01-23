@@ -2,12 +2,22 @@
 //  NavControlMain.swift
 //  MyAppCatalog
 //
-//  Created by Rigoberto Sáenz Imbacuán on 1/22/17.
+//  Created by Rigoberto Sáenz Imbacuán [https://www.linkedin.com/in/rsaenzi] on 1/22/17.
 //  Copyright © 2017 Rigoberto Sáenz Imbacuán. All rights reserved.
 //
 
 import UIKit
 
-class NavControlMain: UINavigationController {
+class NavControlMain: UINavigationController, UINavigationControllerDelegate {
     
+    private let animator = AnimatorNavControllerMain()
+    
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        // Set the operation that will be perform in the animator
+        animator.operation = operation
+        
+        // Set the animator that will handle animated transitions
+        return animator
+    }
 }

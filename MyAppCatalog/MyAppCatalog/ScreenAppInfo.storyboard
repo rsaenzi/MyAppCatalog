@@ -131,7 +131,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-KK-sr0" userLabel="Line">
-                                        <rect key="frame" x="0.0" y="139" width="320" height="0.5"/>
+                                        <rect key="frame" x="0.0" y="140" width="320" height="0.0"/>
                                         <color key="backgroundColor" red="0.0032942520920000002" green="0.88688063620000002" blue="0.94331908229999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="Bqw-dd-WLJ"/>
@@ -295,7 +295,7 @@
                                                 <rect key="frame" x="8" y="126" width="304" height="16"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoG-Gm-V50">
-                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="15"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -333,15 +333,15 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="D5b-GV-z4Z" firstAttribute="top" secondItem="Tfb-Ca-mlS" secondAttribute="bottom" id="3WK-XS-IyU"/>
+                            <constraint firstItem="Tfb-Ca-mlS" firstAttribute="top" secondItem="ZEy-nL-pE9" secondAttribute="top" id="HQc-ft-HCd"/>
                             <constraint firstAttribute="trailing" secondItem="D5b-GV-z4Z" secondAttribute="trailing" id="R74-5U-DrW"/>
                             <constraint firstItem="Tfb-Ca-mlS" firstAttribute="leading" secondItem="ZEy-nL-pE9" secondAttribute="leading" id="WlE-Ni-wGB"/>
                             <constraint firstItem="Hko-sa-I9w" firstAttribute="top" secondItem="D5b-GV-z4Z" secondAttribute="bottom" id="aET-Cl-iJ6"/>
-                            <constraint firstItem="Tfb-Ca-mlS" firstAttribute="top" secondItem="ZEy-nL-pE9" secondAttribute="top" id="dpd-wH-8SX"/>
                             <constraint firstAttribute="trailing" secondItem="Tfb-Ca-mlS" secondAttribute="trailing" id="iX1-5x-zOt"/>
                             <constraint firstItem="D5b-GV-z4Z" firstAttribute="leading" secondItem="ZEy-nL-pE9" secondAttribute="leading" id="tne-EZ-JQC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Info" id="59q-eN-MJy">
+                    <navigationItem key="navigationItem" title="App Info" id="59q-eN-MJy">
                         <barButtonItem key="backBarButtonItem" title="  " id="8LM-g4-Qan"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
@@ -364,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXJ-EM-rag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1479" y="78"/>
+            <point key="canvasLocation" x="-1479.375" y="77.112676056338032"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0046438802960000001" green="0.59982818370000002" blue="0.83699244260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
