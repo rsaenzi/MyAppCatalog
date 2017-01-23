@@ -15,7 +15,7 @@ class ScreenAppListIpad: UIViewController, UICollectionViewDelegate, UICollectio
     // --------------------------------------------------
     @IBOutlet weak var collectionview: UICollectionView!
     private let selection = UIView()
-    private let iconCorner: CGFloat = 12.0
+    private let iconCorner: CGFloat = 25.0
     private let cellIdentifier = "CellAppListIpad"
     
     

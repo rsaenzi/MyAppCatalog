@@ -88,4 +88,12 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         // Clears the selection
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    
+    // --------------------------------------------------
+    // IBAction
+    // --------------------------------------------------
+    @IBAction func onTapIcon(sender: UIBarButtonItem) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.linkedin.com/in/rsaenzi/")!)
+    }
 }

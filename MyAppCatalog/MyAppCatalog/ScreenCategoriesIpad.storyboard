@@ -26,44 +26,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NGt-c9-skQ">
-                                    <size key="itemSize" width="207" height="203"/>
+                                    <size key="itemSize" width="220" height="220"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellCategoriesIpad" id="5w2-Uu-Jdq" customClass="CellCategoriesIpad" customModule="MyAppCatalog" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="0.0" width="207" height="203"/>
+                                        <rect key="frame" x="78" y="0.0" width="220" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="207" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-dI-vxX">
-                                                    <rect key="frame" x="8" y="8" width="191" height="187"/>
+                                                    <rect key="frame" x="8" y="8" width="204" height="204"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Networking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-xh-C1e">
-                                                    <rect key="frame" x="0.0" y="16" width="207" height="24"/>
+                                                    <rect key="frame" x="0.0" y="16" width="220" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="aRc-uF-ttQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="textColor" red="0.0046438802960000001" green="0.59982818370000002" blue="0.83699244260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apps: 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ak-KR-8fl">
-                                                    <rect key="frame" x="16" y="167" width="183" height="20"/>
+                                                    <rect key="frame" x="16" y="184" width="196" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="ZqQ-vC-zty"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Folder" translatesAutoresizingMaskIntoConstraints="NO" id="TDZ-jR-8xn" userLabel="Folder">
-                                                    <rect key="frame" x="130" y="128" width="76.5" height="75"/>
+                                                    <rect key="frame" x="138.5" y="138" width="81.5" height="82"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -106,6 +106,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="W1j-AN-ump">
                         <barButtonItem key="backBarButtonItem" title="  " id="wFG-N5-Z7X"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Gc6-3V-U9z">
+                            <connections>
+                                <action selector="onTapIcon:" destination="WSS-gC-iVo" id="C4s-Ha-noI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>

@@ -122,6 +122,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Categories" id="JmR-27-QbQ">
                         <barButtonItem key="backBarButtonItem" title="  " id="4bq-zS-sUY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="gYw-iz-qTS">
+                            <connections>
+                                <action selector="onTapIcon:" destination="oJ1-mo-J52" id="DJv-nf-JCx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>

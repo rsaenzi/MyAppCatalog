@@ -15,7 +15,7 @@ class ScreenCategoriesIpad: UIViewController, UICollectionViewDelegate, UICollec
     // --------------------------------------------------
     @IBOutlet weak var collectionview: UICollectionView!
     private let selection = UIView()
-    private let iconCorner: CGFloat = 18.0
+    private let iconCorner: CGFloat = 25.0
     private let cellIdentifier = "CellCategoriesIpad"
     
     
@@ -84,5 +84,13 @@ class ScreenCategoriesIpad: UIViewController, UICollectionViewDelegate, UICollec
         
         // Clears the selection
         collectionview.deselectItemAtIndexPath(indexPath, animated: true)
+    }
+    
+    
+    // --------------------------------------------------
+    // IBAction
+    // --------------------------------------------------
+    @IBAction func onTapIcon(sender: UIBarButtonItem) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.linkedin.com/in/rsaenzi/")!)
     }
 }
