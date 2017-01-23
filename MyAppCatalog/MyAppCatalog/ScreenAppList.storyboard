@@ -34,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjN-4n-9zC" userLabel="PanelIcon">
-                                                    <rect key="frame" x="8" y="9.5" width="60" height="60"/>
+                                                    <rect key="frame" x="8" y="10" width="60" height="60"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPv-WJ-iQ3">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -62,7 +62,7 @@
                                                             <color key="textColor" red="0.0046438802960000001" green="0.59982818370000002" blue="0.83699244260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Inc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7B-yc-VgT">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7B-yc-VgT">
                                                             <rect key="frame" x="0.0" y="21" width="211" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="3nj-yM-xTG"/>
@@ -83,6 +83,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.0 US" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIe-vI-REZ">
                                                             <rect key="frame" x="0.0" y="42" width="211" height="18"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="9mc-x5-K4e"/>
                                                                 <constraint firstAttribute="height" constant="18" id="XDH-vZ-lJK"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -91,6 +92,7 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="jIe-vI-REZ" secondAttribute="trailing" id="4fp-mk-JEO"/>
                                                         <constraint firstAttribute="height" constant="60" id="9Kt-QB-YJK"/>
                                                         <constraint firstItem="c7B-yc-VgT" firstAttribute="centerY" secondItem="wvH-Ky-yT6" secondAttribute="centerY" id="9Ye-Fv-TRf"/>
                                                         <constraint firstAttribute="trailing" secondItem="piH-uq-sBP" secondAttribute="trailing" id="CbF-1v-qdg"/>
@@ -100,8 +102,10 @@
                                                         <constraint firstItem="jIe-vI-REZ" firstAttribute="leading" secondItem="wvH-Ky-yT6" secondAttribute="leading" id="Npb-Cy-Oit"/>
                                                         <constraint firstItem="Jdr-JE-m1D" firstAttribute="leading" secondItem="wvH-Ky-yT6" secondAttribute="leading" id="UQm-Qf-llc"/>
                                                         <constraint firstAttribute="bottom" secondItem="piH-uq-sBP" secondAttribute="bottom" id="ZSN-Vn-9O9"/>
+                                                        <constraint firstItem="jIe-vI-REZ" firstAttribute="leading" secondItem="wvH-Ky-yT6" secondAttribute="leading" id="b3d-dK-Lha"/>
                                                         <constraint firstAttribute="trailing" secondItem="jIe-vI-REZ" secondAttribute="trailing" id="p2C-pY-ajy"/>
                                                         <constraint firstItem="piH-uq-sBP" firstAttribute="leading" secondItem="wvH-Ky-yT6" secondAttribute="leading" id="vtt-2e-MHR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="jIe-vI-REZ" secondAttribute="bottom" id="xma-xC-PbE"/>
                                                         <constraint firstItem="c7B-yc-VgT" firstAttribute="leading" secondItem="wvH-Ky-yT6" secondAttribute="leading" id="xsg-T7-CbN"/>
                                                         <constraint firstAttribute="trailing" secondItem="c7B-yc-VgT" secondAttribute="trailing" id="ydB-WH-dcM"/>
                                                     </constraints>

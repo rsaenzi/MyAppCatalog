@@ -11,7 +11,7 @@ class Model {
     // --------------------------------------------------
     // Components
     // --------------------------------------------------
-    private var categories:   [EntityCategory]?
+    private var categories:     [EntityCategory]?
     private var appsByCategory: [Int: [EntityApp]]?
     
     var selectedCategory: Int = 0

@@ -12,6 +12,7 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     @IBOutlet weak var tableview: UITableView!
     private let selection = UIView()
+    private let iconCorner: CGFloat = 12.0
     
     override func viewDidLoad() {
         
@@ -34,7 +35,7 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         // Dequeue a cell
         let cell = tableView.dequeueReusableCellWithIdentifier("CellAppList", forIndexPath: indexPath) as! CellAppList
         
-        // Get the apps to display
+        // Get the app to display
         let app = App.app.model.getAppsFromSelectedCategory()[indexPath.row]
     
         // Fill in the cell
@@ -61,8 +62,8 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
         
         // Adds a round border to imageview
-        if cell.iconImg.layer.cornerRadius != 12 {
-            cell.iconImg.layer.cornerRadius = 12
+        if cell.iconImg.layer.cornerRadius != iconCorner {
+            cell.iconImg.layer.cornerRadius = iconCorner
         }
         
         // Set the selection color

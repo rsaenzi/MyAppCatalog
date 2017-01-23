@@ -13,6 +13,7 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     @IBOutlet weak var tableview: UITableView!
     private let selection = UIView()
+    private let iconCorner: CGFloat = 18.0
     
     override func viewDidLoad() {
         
@@ -22,7 +23,6 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         // Set the selection color
         selection.backgroundColor = App.app.views.lightGreen
     }
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return App.app.model.getCategories().count
@@ -47,8 +47,8 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
         
         // Adds a round border to imageview
-        if cell.iconImg.layer.cornerRadius != 18 {
-            cell.iconImg.layer.cornerRadius = 18
+        if cell.iconImg.layer.cornerRadius != iconCorner {
+            cell.iconImg.layer.cornerRadius = iconCorner
         }
         
         // Set the selection color
