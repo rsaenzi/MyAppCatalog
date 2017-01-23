@@ -10,8 +10,16 @@ import UIKit
 
 class Views {
     
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     let lightGreen = UIColor(red: 197/255, green: 241/255, blue: 227/255, alpha: 1)
+    let mediumBlue = UIColor(red:   1/255, green: 153/255, blue: 213/255, alpha: 1)
     
+    
+    // --------------------------------------------------
+    // Public Methods
+    // --------------------------------------------------
     func loadScreen<T: UIViewController>(screenClass: T.Type) -> T {
         
         // Get the screen name
@@ -51,6 +59,10 @@ class Views {
         }
     }
     
+    
+    // --------------------------------------------------
+    // Private Methods
+    // --------------------------------------------------
     private func className(some: Any) -> String {
         return (some is Any.Type) ? "\(some)" : "\(some.dynamicType)"
     }

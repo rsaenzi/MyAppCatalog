@@ -11,8 +11,15 @@ import Foundation
 
 class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     var operation = UINavigationControllerOperation.Pop
     
+    
+    // --------------------------------------------------
+    // UIViewControllerAnimatedTransitioning
+    // --------------------------------------------------
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         switch operation {
         case .Pop: return 0.4
@@ -27,6 +34,22 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
         }
     }
     
+    
+    // --------------------------------------------------
+    // UIViewControllerTransitioningDelegate
+    // --------------------------------------------------
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self
+    }
+    
+    
+    // --------------------------------------------------
+    // Private Methods
+    // --------------------------------------------------
     private func animationPush(context: UIViewControllerContextTransitioning) {
         
         // Extracts the conteiner for both screen while are animated...
@@ -107,7 +130,6 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
                 // End appearance transition for source screen
                 source.endAppearanceTransition()
         })
-        
     }
     
     private func animationPop(context: UIViewControllerContextTransitioning) {
@@ -171,13 +193,5 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
                 // The animation is over
                 context.completeTransition(true)
         })
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self
     }
 }

@@ -10,11 +10,18 @@ import UIKit
 
 class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     @IBOutlet weak var tableview: UITableView!
     private let selection = UIView()
     private let iconCorner: CGFloat = 12.0
     private let cellIdentifier = "CellAppList"
     
+    
+    // --------------------------------------------------
+    // UIViewController
+    // --------------------------------------------------
     override func viewDidLoad() {
         
         // Set the screen title
@@ -27,6 +34,10 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         selection.backgroundColor = App.app.views.lightGreen
     }
     
+    
+    // --------------------------------------------------
+    // UITableViewDataSource
+    // --------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return App.app.model.getAppsFromSelectedCategory().count
     }
@@ -77,6 +88,9 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     
+    // --------------------------------------------------
+    // UITableViewDelegate
+    // --------------------------------------------------
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // Saves the selected app index

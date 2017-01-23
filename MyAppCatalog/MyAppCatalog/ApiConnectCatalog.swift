@@ -13,10 +13,14 @@ typealias CallbackApiCatalog = (response: ApiResponseCatalog) -> ()
 class ApiConnectCatalog {
     
     // --------------------------------------------------
-    // Components
+    // Members
     // --------------------------------------------------
     private let endpointUrl = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json"
     
+    
+    // --------------------------------------------------
+    // Public Methods
+    // --------------------------------------------------
     func get(callback: CallbackApiCatalog) {
         
         // Configuration
@@ -33,6 +37,10 @@ class ApiConnectCatalog {
         }
     }
     
+    
+    // --------------------------------------------------
+    // Private Methods
+    // --------------------------------------------------
     private func handleResult(result: Response<String, NSError>, callback: CallbackApiCatalog) {
         
         // Response object
@@ -101,6 +109,7 @@ class ApiConnectCatalog {
         // Sends back the response
         callback(response: response)
     }
+    
     
     // --------------------------------------------------
     // Unique-Access Singleton

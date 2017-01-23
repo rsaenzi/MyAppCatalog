@@ -21,6 +21,5 @@ class App {
     // Singleton
     // --------------------------------------------------
     static let app = App()
-    
     private init() {}
 }

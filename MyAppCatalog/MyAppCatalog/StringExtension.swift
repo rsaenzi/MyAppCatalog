@@ -10,6 +10,9 @@ import Foundation
 
 extension String {
     
+    // --------------------------------------------------
+    // Public Methods
+    // --------------------------------------------------
     func countOcurrences(stringToCount: String) -> Int {
         let slices = self.componentsSeparatedByString(stringToCount)
         return slices.count-1
@@ -31,6 +34,10 @@ extension String {
         return self.rangeOfString(find) != nil
     }
     
+    
+    // --------------------------------------------------
+    // Subscripts
+    // --------------------------------------------------
     subscript (i: Int) -> Character {
         return self[self.startIndex.advancedBy(i)]
     }

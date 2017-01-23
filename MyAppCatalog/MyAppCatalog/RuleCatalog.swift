@@ -10,6 +10,9 @@ typealias CallbackRuleCatalog = (result: RuleCatalogResult) -> ()
 
 class RuleCatalog {
     
+    // --------------------------------------------------
+    // Public Methods
+    // --------------------------------------------------
     func start(callback: CallbackRuleCatalog) {
         
         // First we try to get the data from the API

@@ -12,7 +12,7 @@ import Kingfisher
 class Model {
     
     // --------------------------------------------------
-    // Components
+    // Members
     // --------------------------------------------------
     private var categories:     [EntityCategory]?
     private var appsByCategory: [Int: [EntityApp]]?
@@ -21,6 +21,9 @@ class Model {
     var selectedApp:      Int = 0
     
     
+    // --------------------------------------------------
+    // Public Methods
+    // --------------------------------------------------
     func saveCatalog(catalog: EntityCatalog, canPrefecthImages: Bool) {
         
         // Prefetch and saves app icons
@@ -104,6 +107,10 @@ class Model {
         }
     }
     
+    
+    // --------------------------------------------------
+    // Private Methods
+    // --------------------------------------------------
     private func prefecthImages(allApps: [EntityApp]) {
         
         // Gets all image url
@@ -124,6 +131,7 @@ class Model {
         let prefetcher = ImagePrefetcher(urls: imageURLs)
         prefetcher.start()
     }
+    
     
     // --------------------------------------------------
     // Unique-Access Singleton

@@ -12,9 +12,16 @@ import Foundation
 
 class PersistenceCatalog {
     
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     private let dbName  = "Catalog"
     private let dbField = "data"
     
+    
+    // --------------------------------------------------
+    // Public Methods
+    // --------------------------------------------------
     func save(data: String) -> Bool{
         
         // Empty data is not allowed

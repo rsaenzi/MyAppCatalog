@@ -11,11 +11,18 @@ import Kingfisher
 
 class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     @IBOutlet weak var tableview: UITableView!
     private let selection = UIView()
     private let iconCorner: CGFloat = 18.0
     private let cellIdentifier = "CellCategories"
     
+    
+    // --------------------------------------------------
+    // UIViewController
+    // --------------------------------------------------
     override func viewDidLoad() {
         
         // Deletes the empty cells of the table
@@ -25,6 +32,10 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         selection.backgroundColor = App.app.views.lightGreen
     }
     
+    
+    // --------------------------------------------------
+    // UITableViewDataSource
+    // --------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return App.app.model.getCategories().count
     }
@@ -61,6 +72,10 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         return cell
     }
     
+    
+    // --------------------------------------------------
+    // UITableViewDelegate
+    // --------------------------------------------------
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         // Saves the selected category index

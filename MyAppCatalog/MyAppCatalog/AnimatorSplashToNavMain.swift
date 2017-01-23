@@ -11,6 +11,9 @@ import Foundation
 
 class AnimatorSplashToNavMain: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
+    // --------------------------------------------------
+    // UIViewControllerAnimatedTransitioning
+    // --------------------------------------------------
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1.0
     }
@@ -74,6 +77,10 @@ class AnimatorSplashToNavMain: NSObject, UIViewControllerAnimatedTransitioning, 
         })
     }
     
+    
+    // --------------------------------------------------
+    // UIViewControllerTransitioningDelegate
+    // --------------------------------------------------
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
     }

@@ -11,12 +11,14 @@ import Foundation
 
 class ScreenAppInfo: UIViewController {
     
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var date: UILabel!
-    
     @IBOutlet weak var iTunesId: UILabel!
     @IBOutlet weak var iTunesLink: UILabel!
     @IBOutlet weak var bundleId: UILabel!
@@ -35,6 +37,10 @@ class ScreenAppInfo: UIViewController {
     private let panelDockedOpen:  CGFloat = 140.0
     private let panelDockedSpeed: NSTimeInterval = 0.5
     
+    
+    // --------------------------------------------------
+    // UIViewController
+    // --------------------------------------------------
     override func viewDidLoad() {
         
         // Get the app to display
@@ -108,6 +114,10 @@ class ScreenAppInfo: UIViewController {
             }, completion: nil)
     }
     
+    
+    // --------------------------------------------------
+    // IBActions
+    // --------------------------------------------------
     @IBAction func onTapButton(sender: UIButton, forEvent event: UIEvent) {
         
         // Get the current app

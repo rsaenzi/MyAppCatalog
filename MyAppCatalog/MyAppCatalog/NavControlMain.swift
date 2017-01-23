@@ -10,8 +10,15 @@ import UIKit
 
 class NavControlMain: UINavigationController, UINavigationControllerDelegate {
     
+    // --------------------------------------------------
+    // Members
+    // --------------------------------------------------
     private let animator = AnimatorNavControllerMain()
     
+
+    // --------------------------------------------------
+    // UINavigationControllerDelegate
+    // --------------------------------------------------
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         // Set the operation that will be perform in the animator
