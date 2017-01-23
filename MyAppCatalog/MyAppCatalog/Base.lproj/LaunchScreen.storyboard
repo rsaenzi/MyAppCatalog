@@ -20,17 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3" userLabel="Screen">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Fiw-JK-sFN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="Fiw-JK-sFN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1ZL-ks-44h"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Fiw-JK-sFN" secondAttribute="bottom" id="5Bw-IU-MkX"/>
-                            <constraint firstAttribute="trailing" secondItem="Fiw-JK-sFN" secondAttribute="trailing" id="8Ph-Ps-a0l"/>
-                            <constraint firstItem="Fiw-JK-sFN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vES-30-UDo"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.0039215686274509803" green="0.88688063620000002" blue="0.94331908229999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,8 +28,5 @@
             <point key="canvasLocation" x="-876" y="225"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Background" width="398" height="399"/>
-    </resources>
     <color key="tintColor" red="0.0046438802964985371" green="0.59982818365097046" blue="0.83699244260787964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

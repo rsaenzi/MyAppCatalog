@@ -116,6 +116,4 @@ class ScreenAppInfo: UIViewController {
         // Open the URL
         UIApplication.sharedApplication().openURL(NSURL(string: app.itunesLink!)!)
     }
-    
-    
 }

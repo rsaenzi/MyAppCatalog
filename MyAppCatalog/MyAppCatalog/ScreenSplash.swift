@@ -10,62 +10,109 @@ import UIKit
 
 class ScreenSplash: UIViewController {
     
-    override func viewDidLoad() {
+    @IBOutlet weak var imageLogo: UIImageView!
     
-        // TODO: Temporal
-        let triggerTime = Int64(NSEC_PER_SEC) * 1
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
+    private var ruleResult = RuleCatalogResult.offlineWithNoData
+    private let duration: NSTimeInterval = 5.0
+    
+    private var apiCalled = false
+    private var animEnded = false
+    
+    override func viewDidLoad() {
         
-            // Start the connection to API
-            App.app.rules.catalog.start() { (ruleResult) in
-                
-                // Decides what to do next
-                self.processResult(ruleResult)
+        apiCalled = false
+        animEnded = false
+        
+        // Start the connection to API
+        App.app.rules.catalog.start() { (result) in
+            
+            // Saves the result
+            self.ruleResult = result
+            
+            self.apiCalled = true
+            
+            // Decides what to do next
+            if self.apiCalled && self.animEnded {
+                self.processResult()
             }
-        })
+        }
     }
     
-    private func processResult(ruleResult: RuleCatalogResult){
-    
-        // TODO: Temporal
-        let triggerTime = Int64(NSEC_PER_SEC) * 2
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, triggerTime), dispatch_get_main_queue(), { () -> Void in
+    override func viewDidAppear(animated: Bool) {
+        
+        let key1Start = 0.0
+        let key1End   = 0.1
+        
+        let key2Start = 0.2
+        let key2End   = 0.3
+        
+        self.imageLogo.transform = CGAffineTransformMakeScale(5.0, 5.0);
+        self.imageLogo.alpha = 0
+        
+        // The animation begins...
+        UIView.animateKeyframesWithDuration(duration, delay: 0, options: .CalculationModeLinear, animations: {
             
-            switch ruleResult {
+            // Set the keyframe 1
+            UIView.addKeyframeWithRelativeStartTime(key1Start, relativeDuration: key1End, animations: {
+                self.imageLogo.transform = CGAffineTransformIdentity // MakeScale(1.0, 1.0);
+                self.imageLogo.alpha = 1
+            })
             
-            case .online:
+            // Set the keyframe 2
+            UIView.addKeyframeWithRelativeStartTime(key2Start, relativeDuration: key2End, animations: {
+                //self.imageLogo.transform = CGAffineTransformMakeScale(1.0, 1.0);
                 
-                // Shows the catalog screen
-                self.showCatalog()
-                
-            case .offlineWithCachedData:
-                
-                // Create the OK button
-                let alertActionOK = UIAlertAction(title: "OK", style: .Default, handler: { (alertAction) in
-                    self.showCatalog()
-                })
-                
-                // Create and configure the alert
-                let alert = UIAlertController(title: "Warning", message: "There is no Internet. A cached info will be displayed...", preferredStyle: .Alert)
-                alert.addAction(alertActionOK)
-                
-                // Display the alert
-                self.presentViewController(alert, animated: true, completion: nil)
-                
-            case .offlineWithNoData:
+                self.imageLogo.frame.origin.y -= 100
+            })
             
-                // Create the OK button
-                let alertActionOK = UIAlertAction(title: "OK", style: .Default, handler: { (alertAction) in
-                })
-                
-                // Create and configure the alert
-                let alert = UIAlertController(title: "Error", message: "There is no Internet. No cached data is available...", preferredStyle: .Alert)
-                alert.addAction(alertActionOK)
-                
-                // Display the alert
-                self.presentViewController(alert, animated: true, completion: nil)
+        }) { (finished) in
+            
+            self.animEnded = true
+            
+            // Decides what to do next
+            if self.apiCalled && self.animEnded {
+                self.processResult()
             }
-        })
+        }
+        
+    }
+    
+    private func processResult(){
+        
+        switch self.ruleResult {
+            
+        case .online:
+            
+            // Shows the catalog screen
+            self.showCatalog()
+            
+        case .offlineWithCachedData:
+            
+            // Create the OK button
+            let alertActionOK = UIAlertAction(title: "OK", style: .Default, handler: { (alertAction) in
+                self.showCatalog()
+            })
+            
+            // Create and configure the alert
+            let alert = UIAlertController(title: "Warning", message: "There is no Internet. A cached info will be displayed...", preferredStyle: .Alert)
+            alert.addAction(alertActionOK)
+            
+            // Display the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        case .offlineWithNoData:
+            
+            // Create the OK button
+            let alertActionOK = UIAlertAction(title: "OK", style: .Default, handler: { (alertAction) in
+            })
+            
+            // Create and configure the alert
+            let alert = UIAlertController(title: "Error", message: "There is no Internet. No cached data is available...", preferredStyle: .Alert)
+            alert.addAction(alertActionOK)
+            
+            // Display the alert
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     private func showCatalog() {

@@ -40,7 +40,7 @@ class AnimatorSplashToNavMain: NSObject, UIViewControllerAnimatedTransitioning, 
         
         
         // Takes a screenshot of source screen
-        let sourceScreenshot = source.view.snapshotViewAfterScreenUpdates(false)!
+        let sourceScreenshot = source.view.snapshotViewAfterScreenUpdates(true)!
         
         // Sets this flag to see any border animation
         sourceScreenshot.clipsToBounds = true
@@ -63,9 +63,6 @@ class AnimatorSplashToNavMain: NSObject, UIViewControllerAnimatedTransitioning, 
             
             // The screenshot gradually becomes transparent
             sourceScreenshot.alpha = 0
-            
-            // The screenshot gradually gets rounded corners
-            //sourceScreenshot.layer.cornerRadius = 10
             
             }, completion: { finished in
                 

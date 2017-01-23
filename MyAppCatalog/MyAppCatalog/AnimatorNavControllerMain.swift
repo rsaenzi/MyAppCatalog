@@ -15,7 +15,7 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         switch operation {
-        case .Pop: return 1.0
+        case .Pop: return 0.4
         default:   return 1.0
         }
     }
@@ -40,10 +40,10 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
         let duration = self.transitionDuration(context)
         
         // Calculate the dependant values
-        let keyframe1Start    = duration * 0.0
-        let keyframe2Start    = duration * 0.2
-        let keyframe1Relative = duration * 1.0
-        let keyframe2Relative = duration * 0.8
+        let key1Start = duration * 0.0
+        let key1End   = duration * 1.0
+        let key2Start = duration * 0.2
+        let key2End   = duration * 0.8
         
         // Calculates the ajust value when screen has a navigation bar or item added
         let navBarAjustValue: CGFloat = source.navigationController!.navigationBar.frame.size.height + 20 // System Bar
@@ -58,7 +58,7 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
         // Calculate a 3d transform to translate the screenshot back in Z plane
         var perspectiveTransform = CATransform3DIdentity
         perspectiveTransform.m34 = 1.0 / -1000.0
-        perspectiveTransform = CATransform3DTranslate(perspectiveTransform, 0, 0, -100)
+        perspectiveTransform = CATransform3DTranslate(perspectiveTransform, 0, 50, -300)
         
         // Applies the 3d transform to screenshot
         targetScreenshot.layer.transform = perspectiveTransform
@@ -71,8 +71,8 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
         // The transition begins...
         UIView.animateKeyframesWithDuration(duration, delay: 0.0, options: .CalculationModeCubic, animations: {() -> Void in
             
-            // Set an animation keyframe
-            UIView.addKeyframeWithRelativeStartTime(keyframe1Start, relativeDuration: keyframe1Relative, animations: {() -> Void in
+            // Set the keyframe 1
+            UIView.addKeyframeWithRelativeStartTime(key1Start, relativeDuration: key1End, animations: {() -> Void in
                 
                 // The source screen gradually takes its place in the screen
                 var sourceRect = source.view.frame
@@ -80,8 +80,8 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
                 source.view.frame = sourceRect
             })
             
-            // Set another animation keyframe
-            UIView.addKeyframeWithRelativeStartTime(keyframe2Start, relativeDuration: keyframe2Relative, animations: {() -> Void in
+            // Set the keyframe 2
+            UIView.addKeyframeWithRelativeStartTime(key2Start, relativeDuration: key2End, animations: {() -> Void in
                 
                 // Target screen gradually becomes get the initial 3d position
                 targetScreenshot.layer.transform = CATransform3DIdentity
@@ -98,7 +98,7 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
                 // Adds an ajust value, to avoid issues with navigation bars
                 target.view.center.y += CGFloat(navBarAjustValue)
                 
-                // Add destination controller to view
+                // Removes the target screen
                 container.addSubview(target.view)
                 
                 // Finish transition
@@ -122,10 +122,6 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
         // Get the duration from above
         let duration = self.transitionDuration(context)
         
-        // Calculate the dependant values
-        let damping = CGFloat(duration) * 1.0
-        let sprint  = CGFloat(duration) * 3.0
-        
         // Calculates the ajust value when screen has a navigation bar or item added
         let navBarAjustValue:     CGFloat = source.navigationController!.navigationBar.frame.size.height + 20 // System Bar
         let navBarAjustValueHalf: CGFloat = navBarAjustValue / 2.0
@@ -134,31 +130,43 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
         // Target screen is added to transition container
         container.addSubview(target.view)
         
+        // Source screen is also added, but is pushed to the back
+        container.addSubview(source.view)
+        container.sendSubviewToBack(source.view)
+        
+        // Initial alpha values
+        source.view.alpha = 1.0
+        target.view.alpha = 0.2
+        
         // Defines the points outside the screen to position the target screen
-        var centerOffScreen = container.center
-        centerOffScreen.y = (-1) * container.frame.size.height
+        var centerOffScreen = source.view.center
+        centerOffScreen.y = centerOffScreen.y + (centerOffScreen.y / 2)
         
         // Moves the screen to that position
         target.view.center = centerOffScreen
         
         
         // The transition begins...
-        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: damping, initialSpringVelocity: sprint, options: .CurveEaseIn, animations: {() -> Void in
+        UIView.animateWithDuration(duration, delay: 0.0, options: .CurveEaseIn, animations: {() -> Void in
             
             // The target gradually moves to the screen center
-            target.view.center = container.center
+            target.view.center = source.view.center
             
             // Adds an ajust value, to avoid issues with navigation bars
             if let _ = target as? ScreenCategories {
-                target.view.center.y += navBarAjustValueHalf
-            }else {
-                target.view.center.y += navBarAjustValue
+                target.view.center.y -= navBarAjustValueHalf
             }
             
             // Source screen gradually becomes transparent
-            source.view.alpha = 0
+            source.view.alpha = 0.6
+            
+            // Source screen gradually becomes visible
+            target.view.alpha = 1.0
             
             }, completion: {(finished: Bool) -> Void in
+                
+                // Removes the source screen
+                container.addSubview(source.view)
                 
                 // The animation is over
                 context.completeTransition(true)
