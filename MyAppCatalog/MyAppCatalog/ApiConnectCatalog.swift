@@ -12,13 +12,12 @@ typealias CallbackApiCatalog = (response: ApiResponseCatalog) -> ()
 
 class ApiConnectCatalog {
     
-    private var callback: CallbackApiCatalog?
+    // --------------------------------------------------
+    // Components
+    // --------------------------------------------------
     private let endpointUrl = "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json"
     
     func get(callback: CallbackApiCatalog) {
-        
-        // Saves the callback for later execution
-        self.callback = callback
         
         // Configuration
         let method = Alamofire.Method.GET
@@ -29,66 +28,78 @@ class ApiConnectCatalog {
         // Start the connection
         connector.responseString { result in
             
-            //print("Connection Result: \(result)")
-            
             // Handle the result properly
-            self.handleResult(result)
+            self.handleResult(result, callback: callback)
         }
     }
     
-    private func handleResult(result: Response<String, NSError>) {
+    private func handleResult(result: Response<String, NSError>, callback: CallbackApiCatalog) {
         
         // Response object
         let response = ApiResponseCatalog()
         
-        print("Hanlde Result Success: \(result.result.isSuccess)")
-    
-        // If connection was established
-        if result.result.isSuccess {
+        // If an error was reported
+        if let error = result.result.error {
             
-            // Process the HTTP code
-            switch result.response!.statusCode {
+            // Error code for no connectivity
+            if error.code == -1009 {
                 
-            case 200:
+                // There is no internet connectivity
+                response.code = .noInternet
                 
-                // Sanitation of the Json string to allow parsing
-                if let jsonString = result.result.value?.replace("\"im:", replacement: "\"") {
-                    
-                    //print("Json String: \(jsonString)")
+            }else{
                 
-                    // Parse the entities from the Json string
-                    let catalog = EntityCatalog(JSONString: jsonString)
-                    
-                    // Saves the response
-                    response.code    = .success
-                    response.catalog = catalog
-                    
-                }else {
-                    // There is no Json data to parse...
-                    response.code = .emptyResponse
-                }
-            
-            case 400:
-                // Client error
-                response.code = .httpClientError
-                
-            case 500:
-                // Server error
-                response.code = .httpServerError
-                
-            default:
-                // No valid HTTP code
-                response.code = .httpBadCode
+                // Error establishing connection, could be a server down
+                response.code = .wrongConnection
             }
-            
         }else {
             
-            // There is no internet connectivity
-            response.code = .noInternet
+            // If connection was established
+            if result.result.isSuccess == true {
+                
+                // Process the HTTP code
+                switch result.response!.statusCode {
+                    
+                case 200:
+                    
+                    // Sanitation of the Json string to allow parsing
+                    if let jsonString = result.result.value?.replace("\"im:", replacement: "\"") {
+                        
+                        // Parse the entities from the Json string
+                        let catalog = EntityCatalog(JSONString: jsonString)
+                        
+                        // Saves the response
+                        response.code       = .success
+                        response.catalog    = catalog
+                        response.jsonString = jsonString
+                        
+                    }else {
+                        // There is no Json data to parse...
+                        response.code = .emptyResponse
+                    }
+                    
+                case 400:
+                    // Client error
+                    response.code = .httpClientError
+                    
+                case 500:
+                    // Server error
+                    response.code = .httpServerError
+                    
+                default:
+                    // No valid HTTP code
+                    response.code = .httpBadCode
+                }
+                
+            }else {
+                
+                // Error establishing connection, could be a server down
+                response.code = .wrongConnection
+            }
         }
-        
+    
         // Sends back the response
-        callback?(response: response)
+        callback(response: response)
     }
     
     // --------------------------------------------------

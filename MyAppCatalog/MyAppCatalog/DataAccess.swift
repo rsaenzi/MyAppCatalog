@@ -8,7 +8,11 @@
 
 class DataAccess {
     
-    var catalog: ApiConnectCatalog = ApiConnectCatalog()!
+    // --------------------------------------------------
+    // Components
+    // --------------------------------------------------
+    var apiConnection: ApiConnectCatalog  = ApiConnectCatalog()!
+    var persistence:   PersistenceCatalog = PersistenceCatalog()!
 
     
     // --------------------------------------------------

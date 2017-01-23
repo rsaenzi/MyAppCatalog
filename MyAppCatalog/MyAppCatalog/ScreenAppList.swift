@@ -13,6 +13,7 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var tableview: UITableView!
     private let selection = UIView()
     private let iconCorner: CGFloat = 12.0
+    private let cellIdentifier = "CellAppList"
     
     override func viewDidLoad() {
         
@@ -33,7 +34,7 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Dequeue a cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellAppList", forIndexPath: indexPath) as! CellAppList
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CellAppList
         
         // Get the app to display
         let app = App.app.model.getAppsFromSelectedCategory()[indexPath.row]
@@ -58,6 +59,8 @@ class ScreenAppList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         // Shows the icon
         if let imageLink = app.imageUrl {
+            
+            // Loads image from cache, if does not exist, start the download
             cell.iconImg.kf_setImageWithURL(NSURL(string: imageLink))
         }
         

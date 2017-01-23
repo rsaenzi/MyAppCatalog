@@ -8,12 +8,11 @@ target 'MyAppCatalog' do
   # Pods for MyAppCatalog
   pod 'Alamofire', '~> 3.5'
   pod 'ObjectMapper', '~> 1.5'
-  pod 'PolyglotLocalization'
+  pod 'PolyglotLocalization', '~> 0.4.0'
   pod 'Kingfisher', '~> 2.6'
   pod 'TPKeyboardAvoiding'
   pod 'KVNProgress'
-
-  #pod 'AlamofireObjectMapper'
+  pod 'SwiftyDB'
 
   target 'MyAppCatalogTests' do
     inherit! :search_paths

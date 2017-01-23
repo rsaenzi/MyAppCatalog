@@ -66,6 +66,8 @@ class ScreenAppInfo: UIViewController {
         
         // Shows the icon
         if let imageLink = app.imageUrl {
+            
+            // Loads image from cache, if does not exist, start the download
             iconImg.kf_setImageWithURL(NSURL(string: imageLink))
         }
         
@@ -97,18 +99,13 @@ class ScreenAppInfo: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        // Expands paneld docked
+        // Expands panelDocked
         panelDockedHeight.constant = panelDockedOpen
         
         // Animates the size change
         UIView.animateWithDuration(panelDockedSpeed, delay: 0, options: .CurveEaseInOut, animations: {
             self.view.layoutIfNeeded()
-            
-            }, completion: { (success) in
-                
-                // Enables the clear button
-                //self.navItemClear.enabled = true
-        })
+            }, completion: nil)
     }
     
     @IBAction func onTapButton(sender: UIButton, forEvent event: UIEvent) {

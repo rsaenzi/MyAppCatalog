@@ -8,6 +8,10 @@
 
 class ApiResponseCatalog {
     
-    var code =   ApiCodeCatalog.noInternet
-    var catalog: EntityCatalog?
+    // Status
+    var code      = ApiCodeCatalog.noInternet
+    
+    // Data
+    var catalog   : EntityCatalog?
+    var jsonString: String?
 }

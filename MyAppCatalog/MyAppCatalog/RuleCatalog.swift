@@ -6,32 +6,60 @@
 //  Copyright © 2017 Rigoberto Sáenz Imbacuán. All rights reserved.
 //
 
-typealias CallbackRuleCatalog = (success: Bool) -> ()
+typealias CallbackRuleCatalog = (result: RuleCatalogResult) -> ()
 
 class RuleCatalog {
     
     func start(callback: CallbackRuleCatalog) {
         
-        App.app.data.catalog.get{ (response) in
-            
-            print("Response Code: \(response.code)")
+        // First we try to get the data from the API
+        App.app.data.apiConnection.get{ (response) in
             
             // If connection was successful, and the catalog exist
             if let catalog = response.catalog where response.code == .success {
                 
                 // Saves the info in the Model
-                App.app.model.saveCatalog(catalog)
+                App.app.model.saveCatalog(catalog, canPrefecthImages: true)
+                
+                // Persist the json to rebuild the catalog later if needed
+                if let data = response.jsonString {
+                    App.app.data.persistence.save(data)
+                }
                 
                 // Informs the result
-                callback(success: true)
+                callback(result: .online)
                 
             }else {
                 
-                // Informs the result
-                callback(success: false)
+                // Asks if a previous catalog was download
+                let readData = App.app.data.persistence.read()
+                
+                // If any data was obtained
+                if let validData = readData {
+                    
+                    // Parse the entities from the Json string
+                    if let catalog = EntityCatalog(JSONString: validData) {
+                        
+                        // Saves the info in the Model
+                        App.app.model.saveCatalog(catalog, canPrefecthImages: false)
+                        
+                        // Informs the result
+                        callback(result: .offlineWithCachedData)
+                        
+                    }else {
+                        
+                        // Informs the result
+                        callback(result: .offlineWithNoData)
+                    }
+                }else {
+                    
+                    // Informs the result
+                    callback(result: .offlineWithNoData)
+                }
             }
         }
     }
+    
     
     // --------------------------------------------------
     // Unique-Access Singleton

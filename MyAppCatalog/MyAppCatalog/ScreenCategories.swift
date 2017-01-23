@@ -14,6 +14,7 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableview: UITableView!
     private let selection = UIView()
     private let iconCorner: CGFloat = 18.0
+    private let cellIdentifier = "CellCategories"
     
     override func viewDidLoad() {
         
@@ -31,7 +32,7 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Dequeue a cell
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellCategories", forIndexPath: indexPath) as! CellCategories
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CellCategories
         
         // Get the category to display
         let category = App.app.model.getCategories()[indexPath.row]
@@ -43,6 +44,8 @@ class ScreenCategories: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         // Shows the icon
         if let imageLink = apps[0].imageUrl {
+            
+            // Loads image from cache, if does not exist, start the download
             cell.iconImg.kf_setImageWithURL(NSURL(string: imageLink))
         }
         

@@ -10,6 +10,7 @@ enum ApiCodeCatalog {
     
     case success
     case emptyResponse
+    case wrongConnection
     case httpClientError
     case httpServerError
     case httpBadCode

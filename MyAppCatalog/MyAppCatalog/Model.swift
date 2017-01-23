@@ -6,6 +6,9 @@
 //  Copyright © 2017 Rigoberto Sáenz Imbacuán. All rights reserved.
 //
 
+import UIKit
+import Kingfisher
+
 class Model {
     
     // --------------------------------------------------
@@ -18,9 +21,14 @@ class Model {
     var selectedApp:      Int = 0
     
     
-    func saveCatalog(catalog: EntityCatalog) {
+    func saveCatalog(catalog: EntityCatalog, canPrefecthImages: Bool) {
         
-        // First we extract the categories avoinding duplicates
+        // Prefetch and saves app icons
+        if let allApps = catalog.apps where canPrefecthImages == true {
+            prefecthImages(allApps)
+        }
+        
+        // Extract the categories avoiding duplicates
         var extractedCategories = [String : EntityCategory]()
         
         // If the catalog has any apps
@@ -94,6 +102,27 @@ class Model {
         }else {
             return []
         }
+    }
+    
+    private func prefecthImages(allApps: [EntityApp]) {
+        
+        // Gets all image url
+        var imageURLs: [NSURL] = []
+        for app in allApps {
+            
+            // If the image url exist and is valid
+            if let url: String = app.imageUrl {
+                if let validURL: NSURL = NSURL(string: url) {
+                    
+                    // It is added to list of images to be prefetched
+                    imageURLs.append(validURL)
+                }
+            }
+        }
+        
+        // Creates and runs the prefetcher
+        let prefetcher = ImagePrefetcher(urls: imageURLs)
+        prefetcher.start()
     }
     
     // --------------------------------------------------

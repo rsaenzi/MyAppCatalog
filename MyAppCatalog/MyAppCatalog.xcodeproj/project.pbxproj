@@ -20,6 +20,8 @@
 		B14BA43B1E34332F00FF16AB /* ScreenAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA43A1E34332F00FF16AB /* ScreenAppInfo.swift */; };
 		B14BA4401E344E2F00FF16AB /* EntityCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA43F1E344E2F00FF16AB /* EntityCatalog.swift */; };
 		B14BA4441E345CDC00FF16AB /* EntityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14BA4431E345CDC00FF16AB /* EntityApp.swift */; };
+		B15241271E35D6E900C57FBA /* PersistenceCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15241261E35D6E900C57FBA /* PersistenceCatalog.swift */; };
+		B152412A1E35D8B500C57FBA /* RuleCatalogResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15241291E35D8B500C57FBA /* RuleCatalogResult.swift */; };
 		B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B2F1E3464A0008FEE85 /* StringExtension.swift */; };
 		B1942B321E34679E008FEE85 /* EntityCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B311E34679E008FEE85 /* EntityCategory.swift */; };
 		B1942B351E3478E9008FEE85 /* ApiConnectCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1942B341E3478E9008FEE85 /* ApiConnectCatalog.swift */; };
@@ -40,6 +42,7 @@
 		B1C4D4881E30E273004DE573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C4D4861E30E273004DE573 /* LaunchScreen.storyboard */; };
 		B1C4D4931E30E273004DE573 /* MyAppCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D4921E30E273004DE573 /* MyAppCatalogTests.swift */; };
 		B1C4D49E1E30E273004DE573 /* MyAppCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D49D1E30E273004DE573 /* MyAppCatalogUITests.swift */; };
+		B1DDC1A01E35E478009C8F0F /* PersistenceStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,8 @@
 		B14BA43A1E34332F00FF16AB /* ScreenAppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAppInfo.swift; sourceTree = "<group>"; };
 		B14BA43F1E344E2F00FF16AB /* EntityCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityCatalog.swift; sourceTree = "<group>"; };
 		B14BA4431E345CDC00FF16AB /* EntityApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityApp.swift; sourceTree = "<group>"; };
+		B15241261E35D6E900C57FBA /* PersistenceCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceCatalog.swift; sourceTree = "<group>"; };
+		B15241291E35D8B500C57FBA /* RuleCatalogResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleCatalogResult.swift; sourceTree = "<group>"; };
 		B1942B2F1E3464A0008FEE85 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B1942B311E34679E008FEE85 /* EntityCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityCategory.swift; sourceTree = "<group>"; };
 		B1942B341E3478E9008FEE85 /* ApiConnectCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConnectCatalog.swift; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		B1C4D4991E30E273004DE573 /* MyAppCatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppCatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C4D49D1E30E273004DE573 /* MyAppCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppCatalogUITests.swift; sourceTree = "<group>"; };
 		B1C4D49F1E30E273004DE573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceStorable.swift; sourceTree = "<group>"; };
 		DAAD063A8621E862F81ED9CE /* Pods_MyAppCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24D7F48A0ED072D6583C661 /* Pods_MyAppCatalogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppCatalogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F234DDA8284183E28EEE9643 /* Pods-MyAppCatalogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppCatalogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppCatalogTests/Pods-MyAppCatalogTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,10 +183,28 @@
 			isa = PBXGroup;
 			children = (
 				B1942B521E354B76008FEE85 /* Persistence */,
-				B1942B331E3478D5008FEE85 /* ApiEndpoints */,
+				B1942B331E3478D5008FEE85 /* ApiConnection */,
 				B1942B501E34AE30008FEE85 /* DataAccess.swift */,
 			);
 			name = DataAccess;
+			sourceTree = "<group>";
+		};
+		B15241251E35D6D800C57FBA /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				B15241261E35D6E900C57FBA /* PersistenceCatalog.swift */,
+				B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */,
+			);
+			name = Catalog;
+			sourceTree = "<group>";
+		};
+		B15241281E35D89C00C57FBA /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				B1942B4E1E34A93D008FEE85 /* RuleCatalog.swift */,
+				B15241291E35D8B500C57FBA /* RuleCatalogResult.swift */,
+			);
+			name = Catalog;
 			sourceTree = "<group>";
 		};
 		B181DD701E30E3A80069A924 /* Views */ = {
@@ -228,12 +252,12 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B1942B331E3478D5008FEE85 /* ApiEndpoints */ = {
+		B1942B331E3478D5008FEE85 /* ApiConnection */ = {
 			isa = PBXGroup;
 			children = (
 				B1942B381E347956008FEE85 /* Catalog */,
 			);
-			name = ApiEndpoints;
+			name = ApiConnection;
 			sourceTree = "<group>";
 		};
 		B1942B381E347956008FEE85 /* Catalog */ = {
@@ -274,8 +298,8 @@
 		B1942B4B1E34A437008FEE85 /* BusinessRules */ = {
 			isa = PBXGroup;
 			children = (
+				B15241281E35D89C00C57FBA /* Catalog */,
 				B1942B4C1E34A44D008FEE85 /* BusinessRules.swift */,
-				B1942B4E1E34A93D008FEE85 /* RuleCatalog.swift */,
 			);
 			name = BusinessRules;
 			sourceTree = "<group>";
@@ -283,6 +307,7 @@
 		B1942B521E354B76008FEE85 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				B15241251E35D6D800C57FBA /* Catalog */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
@@ -652,8 +677,10 @@
 			files = (
 				B14BA4441E345CDC00FF16AB /* EntityApp.swift in Sources */,
 				B1942B4F1E34A93D008FEE85 /* RuleCatalog.swift in Sources */,
+				B152412A1E35D8B500C57FBA /* RuleCatalogResult.swift in Sources */,
 				B14BA4341E34331200FF16AB /* ScreenSplash.swift in Sources */,
 				B1942B3B1E34797C008FEE85 /* ApiResponseCatalog.swift in Sources */,
+				B1DDC1A01E35E478009C8F0F /* PersistenceStorable.swift in Sources */,
 				B14BA4361E34331A00FF16AB /* ScreenCategories.swift in Sources */,
 				B14BA4401E344E2F00FF16AB /* EntityCatalog.swift in Sources */,
 				B1942B421E348665008FEE85 /* App.swift in Sources */,
@@ -667,6 +694,7 @@
 				B1942B441E349056008FEE85 /* Views.swift in Sources */,
 				B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */,
 				B1942B3D1E347A2F008FEE85 /* ApiCodeCatalog.swift in Sources */,
+				B15241271E35D6E900C57FBA /* PersistenceCatalog.swift in Sources */,
 				B14BA43B1E34332F00FF16AB /* ScreenAppInfo.swift in Sources */,
 				B1942B321E34679E008FEE85 /* EntityCategory.swift in Sources */,
 				B1942B351E3478E9008FEE85 /* ApiConnectCatalog.swift in Sources */,
