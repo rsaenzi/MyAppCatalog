@@ -253,7 +253,14 @@ class ScreenSplash: UIViewController {
     private func showCatalog() {
         
         // Creates the screen
-        let screen = App.app.views.loadScreen(ScreenCategories)
+        var screen: UIViewController
+        
+        // The interface is different according to device type
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            screen = App.app.views.loadScreen(ScreenCategoriesIpad)
+        }else {
+            screen = App.app.views.loadScreen(ScreenCategories)
+        }
         
         // Place it in a navigation controller
         let navController = App.app.views.loadNavController(NavControlMain.self, rootScreen: screen)

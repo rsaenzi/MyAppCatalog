@@ -10,6 +10,9 @@
 		07A2D67587044A0219551679 /* Pods_MyAppCatalogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5A21D45889446D87C4BC7D /* Pods_MyAppCatalogTests.framework */; };
 		1FD3FEDFBFFEBC48640FA736 /* Pods_MyAppCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAD063A8621E862F81ED9CE /* Pods_MyAppCatalog.framework */; };
 		302BCDFEC3C975CC0771FBEB /* Pods_MyAppCatalogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24D7F48A0ED072D6583C661 /* Pods_MyAppCatalogUITests.framework */; };
+		B12943C51E36A6CD007E5F8A /* CellAppListIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12943C41E36A6CD007E5F8A /* CellAppListIpad.swift */; };
+		B12943C71E36A6F3007E5F8A /* ScreenAppListIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12943C61E36A6F3007E5F8A /* ScreenAppListIpad.swift */; };
+		B12EEE2A1E36A5E500738C8B /* ScreenAppListIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12EEE291E36A5E500738C8B /* ScreenAppListIpad.storyboard */; };
 		B14BA42B1E34281200FF16AB /* ScreenSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14BA42A1E34281200FF16AB /* ScreenSplash.storyboard */; };
 		B14BA42D1E34282700FF16AB /* ScreenCategories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14BA42C1E34282700FF16AB /* ScreenCategories.storyboard */; };
 		B14BA42F1E34287000FF16AB /* ScreenAppList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14BA42E1E34287000FF16AB /* ScreenAppList.storyboard */; };
@@ -42,6 +45,9 @@
 		B1C4D4881E30E273004DE573 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C4D4861E30E273004DE573 /* LaunchScreen.storyboard */; };
 		B1C4D4931E30E273004DE573 /* MyAppCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D4921E30E273004DE573 /* MyAppCatalogTests.swift */; };
 		B1C4D49E1E30E273004DE573 /* MyAppCatalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4D49D1E30E273004DE573 /* MyAppCatalogUITests.swift */; };
+		B1D238E61E369EF3003EB6E0 /* ScreenCategoriesIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1D238E51E369EF3003EB6E0 /* ScreenCategoriesIpad.storyboard */; };
+		B1D238EA1E36A094003EB6E0 /* ScreenCategoriesIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D238E91E36A094003EB6E0 /* ScreenCategoriesIpad.swift */; };
+		B1D238ED1E36A0EE003EB6E0 /* CellCategoriesIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D238EC1E36A0EE003EB6E0 /* CellCategoriesIpad.swift */; };
 		B1DDC1A01E35E478009C8F0F /* PersistenceStorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */; };
 		B1DDC1A21E36082C009C8F0F /* AnimatorNavControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC1A11E36082C009C8F0F /* AnimatorNavControllerMain.swift */; };
 		B1DDC1A51E360E86009C8F0F /* AnimatorSplashToNavMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DDC1A41E360E86009C8F0F /* AnimatorSplashToNavMain.swift */; };
@@ -71,6 +77,9 @@
 		580ACBD8D14FF10CD7ECB178 /* Pods-MyAppCatalogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppCatalogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppCatalogTests/Pods-MyAppCatalogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		583CC141B51E4E02F5F787E9 /* Pods-MyAppCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAppCatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAppCatalog/Pods-MyAppCatalog.debug.xcconfig"; sourceTree = "<group>"; };
 		7C5A21D45889446D87C4BC7D /* Pods_MyAppCatalogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAppCatalogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12943C41E36A6CD007E5F8A /* CellAppListIpad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAppListIpad.swift; sourceTree = "<group>"; };
+		B12943C61E36A6F3007E5F8A /* ScreenAppListIpad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenAppListIpad.swift; sourceTree = "<group>"; };
+		B12EEE291E36A5E500738C8B /* ScreenAppListIpad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScreenAppListIpad.storyboard; sourceTree = "<group>"; };
 		B14BA42A1E34281200FF16AB /* ScreenSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScreenSplash.storyboard; sourceTree = "<group>"; };
 		B14BA42C1E34282700FF16AB /* ScreenCategories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScreenCategories.storyboard; sourceTree = "<group>"; };
 		B14BA42E1E34287000FF16AB /* ScreenAppList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScreenAppList.storyboard; sourceTree = "<group>"; };
@@ -109,6 +118,9 @@
 		B1C4D4991E30E273004DE573 /* MyAppCatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAppCatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C4D49D1E30E273004DE573 /* MyAppCatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppCatalogUITests.swift; sourceTree = "<group>"; };
 		B1C4D49F1E30E273004DE573 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1D238E51E369EF3003EB6E0 /* ScreenCategoriesIpad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ScreenCategoriesIpad.storyboard; sourceTree = "<group>"; };
+		B1D238E91E36A094003EB6E0 /* ScreenCategoriesIpad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCategoriesIpad.swift; sourceTree = "<group>"; };
+		B1D238EC1E36A0EE003EB6E0 /* CellCategoriesIpad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCategoriesIpad.swift; sourceTree = "<group>"; };
 		B1DDC19F1E35E478009C8F0F /* PersistenceStorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceStorable.swift; sourceTree = "<group>"; };
 		B1DDC1A11E36082C009C8F0F /* AnimatorNavControllerMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorNavControllerMain.swift; sourceTree = "<group>"; };
 		B1DDC1A41E360E86009C8F0F /* AnimatorSplashToNavMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorSplashToNavMain.swift; sourceTree = "<group>"; };
@@ -235,6 +247,7 @@
 		B181DD721E30E3BF0069A924 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B1D238E71E36A076003EB6E0 /* iPad */,
 				B14BA4321E34288B00FF16AB /* Static */,
 				B14BA42A1E34281200FF16AB /* ScreenSplash.storyboard */,
 				B14BA42C1E34282700FF16AB /* ScreenCategories.storyboard */,
@@ -248,6 +261,7 @@
 		B181DD731E30E3D00069A924 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B1D238E81E36A083003EB6E0 /* iPad */,
 				B14BA4331E34331200FF16AB /* ScreenSplash.swift */,
 				B14BA4351E34331A00FF16AB /* ScreenCategories.swift */,
 				B14BA4381E34332600FF16AB /* ScreenAppList.swift */,
@@ -320,6 +334,7 @@
 		B1942B531E354B95008FEE85 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B1D238EB1E36A0E3003EB6E0 /* iPad */,
 				B1942B541E354E74008FEE85 /* CellAppList.swift */,
 				B1942B561E354E7D008FEE85 /* CellCategories.swift */,
 			);
@@ -380,6 +395,33 @@
 				B1C4D49F1E30E273004DE573 /* Info.plist */,
 			);
 			path = MyAppCatalogUITests;
+			sourceTree = "<group>";
+		};
+		B1D238E71E36A076003EB6E0 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				B1D238E51E369EF3003EB6E0 /* ScreenCategoriesIpad.storyboard */,
+				B12EEE291E36A5E500738C8B /* ScreenAppListIpad.storyboard */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		B1D238E81E36A083003EB6E0 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				B1D238E91E36A094003EB6E0 /* ScreenCategoriesIpad.swift */,
+				B12943C61E36A6F3007E5F8A /* ScreenAppListIpad.swift */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		B1D238EB1E36A0E3003EB6E0 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				B1D238EC1E36A0EE003EB6E0 /* CellCategoriesIpad.swift */,
+				B12943C41E36A6CD007E5F8A /* CellAppListIpad.swift */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 		B1DDC1A31E3609DB009C8F0F /* Animators */ = {
@@ -520,8 +562,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12EEE2A1E36A5E500738C8B /* ScreenAppListIpad.storyboard in Resources */,
 				B1C4D4881E30E273004DE573 /* LaunchScreen.storyboard in Resources */,
 				B14BA42B1E34281200FF16AB /* ScreenSplash.storyboard in Resources */,
+				B1D238E61E369EF3003EB6E0 /* ScreenCategoriesIpad.storyboard in Resources */,
 				B14BA4311E34288500FF16AB /* ScreenAppInfo.storyboard in Resources */,
 				B1942B591E354FD9008FEE85 /* NavControlMain.storyboard in Resources */,
 				B1C4D4851E30E273004DE573 /* Assets.xcassets in Resources */,
@@ -689,6 +733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12943C51E36A6CD007E5F8A /* CellAppListIpad.swift in Sources */,
 				B14BA4441E345CDC00FF16AB /* EntityApp.swift in Sources */,
 				B1942B4F1E34A93D008FEE85 /* RuleCatalog.swift in Sources */,
 				B152412A1E35D8B500C57FBA /* RuleCatalogResult.swift in Sources */,
@@ -700,6 +745,7 @@
 				B1942B421E348665008FEE85 /* App.swift in Sources */,
 				B1942B571E354E7D008FEE85 /* CellCategories.swift in Sources */,
 				B1DDC1A21E36082C009C8F0F /* AnimatorNavControllerMain.swift in Sources */,
+				B1D238ED1E36A0EE003EB6E0 /* CellCategoriesIpad.swift in Sources */,
 				B1942B511E34AE30008FEE85 /* DataAccess.swift in Sources */,
 				B1942B5B1E3552AA008FEE85 /* NavControlMain.swift in Sources */,
 				B1C4D47E1E30E273004DE573 /* AppDelegate.swift in Sources */,
@@ -709,10 +755,12 @@
 				B1942B441E349056008FEE85 /* Views.swift in Sources */,
 				B1942B301E3464A0008FEE85 /* StringExtension.swift in Sources */,
 				B1942B3D1E347A2F008FEE85 /* ApiCodeCatalog.swift in Sources */,
+				B1D238EA1E36A094003EB6E0 /* ScreenCategoriesIpad.swift in Sources */,
 				B15241271E35D6E900C57FBA /* PersistenceCatalog.swift in Sources */,
 				B1DDC1A51E360E86009C8F0F /* AnimatorSplashToNavMain.swift in Sources */,
 				B14BA43B1E34332F00FF16AB /* ScreenAppInfo.swift in Sources */,
 				B1942B321E34679E008FEE85 /* EntityCategory.swift in Sources */,
+				B12943C71E36A6F3007E5F8A /* ScreenAppListIpad.swift in Sources */,
 				B1942B351E3478E9008FEE85 /* ApiConnectCatalog.swift in Sources */,
 				B14BA4391E34332600FF16AB /* ScreenAppList.swift in Sources */,
 			);

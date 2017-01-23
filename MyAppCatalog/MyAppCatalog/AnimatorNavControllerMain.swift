@@ -178,6 +178,9 @@ class AnimatorNavControllerMain: NSObject, UIViewControllerAnimatedTransitioning
             if let _ = target as? ScreenCategories {
                 target.view.center.y -= navBarAjustValueHalf
             }
+            if let _ = target as? ScreenCategoriesIpad {
+                target.view.center.y -= navBarAjustValueHalf
+            }
             
             // Source screen gradually becomes transparent
             source.view.alpha = 0.6
